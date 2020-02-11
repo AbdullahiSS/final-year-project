@@ -1,1 +1,702 @@
-<p>nav works!</p>
+  <!-- Hero and Navbar -->
+  <div class="infraloader is-active"></div>
+  <div class="hero main-hero is-medium">
+
+    <!-- Navbar partial -->
+    <nav class="navbar navbar-wrapper is-cloned">
+      <div class="container">
+        <!-- Brand -->
+        <div class="navbar-brand">
+          <a class="navbar-item" [routerLink]="['/']">
+            <img src="assets/img/logos/bulkit-mauve.svg" alt="">
+          </a>
+
+          <!-- Sidebar Trigger -->
+          <a class="navbar-item hamburger-btn navigation-trigger" routerLink="javascript:void(0);">
+            <span class="menu-toggle">
+              <span class="icon-box-toggle">
+                <span class="rotate">
+                  <i class="icon-line-top"></i>
+                  <i class="icon-line-center"></i>
+                  <i class="icon-line-bottom"></i>
+                </span>
+              </span>
+            </span>
+          </a>
+
+          <!-- Responsive toggle -->
+          <div class="custom-burger" data-target="is-cloned">
+            <a class="responsive-btn" routerLink="javascript:void(0);">
+              <span class="menu-toggle">
+                <span class="icon-box-toggle">
+                  <span class="rotate">
+                    <i class="icon-line-top"></i>
+                    <i class="icon-line-center"></i>
+                    <i class="icon-line-bottom"></i>
+                  </span>
+                </span>
+              </span>
+            </a>
+          </div>
+          <!-- /Responsive toggle -->
+        </div>
+
+        <!-- Navbar menu -->
+        <div id="is-cloned" class="navbar-menu">
+          <!-- Navbar Start -->
+          <div class="navbar-start">
+            <!-- Dropdown -->
+            <div class="navbar-item has-dropdown is-hoverable is-mega is-hidden-mobile">
+              <div class="navbar-link">
+                Product
+              </div>
+              <div class="navbar-dropdown is-megamenu animated prefadeInUp fadeInUp" data-style="width: 18rem;">
+                <div class="mega-inner">
+                  <div class="container">
+                    <div class="columns">
+                      <div class="column">
+                        <h2 class="title is-6 is-mega-menu-title">Segmentation</h2>
+                        <a class="navbar-item is-flex" routerLink="/">
+                          <i class="im im-icon-Structure"></i>
+                          <div class="navbar-content">
+                            <p>
+                              <small class="color-primary">Segments</small>
+                            </p>
+                            <p>Segment your customers</p>
+                          </div>
+                        </a>
+                        <a class="navbar-item is-flex" routerLink="/">
+                          <i class="im im-icon-Umbrella-3"></i>
+                          <div class="navbar-content">
+                            <p>
+                              <small class="color-primary">Impact Reports</small>
+                            </p>
+                            <p>Get detailed impact reports</p>
+                          </div>
+                        </a>
+                        <a class="navbar-item is-flex" routerLink="/">
+                          <i class="im im-icon-Mail-Add"></i>
+                          <div class="navbar-content">
+                            <p>
+                              <small class="color-primary">Campaigns</small>
+                            </p>
+                            <p>Targeted Campaigns</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="column">
+                        <h2 class="title is-6 is-mega-menu-title">Lead Generation</h2>
+                        <a class="navbar-item is-flex" routerLink="/">
+                          <i class="im im-icon-Magnifi-Glass2"></i>
+                          <div class="navbar-content">
+                            <p>
+                              <small class="color-primary">Search</small>
+                            </p>
+                            <p>Lead automation digging</p>
+                          </div>
+                        </a>
+                        <a class="navbar-item is-flex" routerLink="/">
+                          <i class="im im-icon-Two-Windows"></i>
+                          <div class="navbar-content">
+                            <p>
+                              <small class="color-primary">Chrome Extension</small>
+                            </p>
+                            <p>Generate more leads</p>
+                          </div>
+                        </a>
+                        <a class="navbar-item is-flex" routerLink="/">
+                          <i class="im im-icon-Flash"></i>
+                          <div class="navbar-content">
+                            <p>
+                              <small class="color-primary">Progress tracker</small>
+                            </p>
+                            <p>Track your progress</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="column">
+                        <h2 class="title is-6 is-mega-menu-title">Deal Management</h2>
+                        <a class="navbar-item is-flex" routerLink="/">
+                          <i class="im im-icon-Sidebar-Window"></i>
+                          <div class="navbar-content">
+                            <p>
+                              <small class="color-primary">Dashboard</small>
+                            </p>
+                            <p>Manage your deals</p>
+                          </div>
+                        </a>
+                        <a class="navbar-item is-flex" routerLink="/">
+                          <i class="im im-icon-Note"></i>
+                          <div class="navbar-content">
+                            <p>
+                              <small class="color-primary">Financial Reports</small>
+                            </p>
+                            <p>Assess your efficiency</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="column">
+                        <h2 class="title is-6 is-mega-menu-title">Get Started</h2>
+                        <p class="is-cta">This is a wonderful menu description item. It can be used as a CTA.</p>
+                        <p class="is-cta">
+                          <a routerLink="/feature" class="button btn-align mega-btn primary-btn">Learn more</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="navbar-divider">
+                  <div class="navbar-item is-footer is-hidden-mobile">
+                    <div class="navbar-content">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item">
+                            <strong>Follow us</strong>
+                          </div>
+                        </div>
+                        <div class="level-right">
+                          <div class="level-item">
+                            <a class="social-link" routerLink="#"><i class="fa fa-twitter"></i></a>
+                            <a class="social-link" routerLink="#"><i class="fa fa-facebook"></i></a>
+                            <a class="social-link" routerLink="#"><i class="fa fa-behance"></i></a>
+                            <a class="social-link" routerLink="#"><i class="fa fa-github"></i></a>
+                            <a class="social-link" routerLink="#"><i class="fa fa-tumblr"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="menu-image is-hidden-mobile">
+                    <img src="assets/img/shapes/megamenu-kit7.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div> <!-- Navbar item -->
+            <a class="navbar-item is-slide is-centered-tablet is-hidden-desktop is-hidden-tablet"
+              [routerLink]="['/product']">
+              Product
+            </a>
+          </div>
+
+          <!-- Navbar end -->
+          <div class="navbar-end">
+            <!-- Navbar item -->
+            <a class="navbar-item is-slide is-centered-tablet" routerLinkActive="is-active" [routerLink]="['/pricing']">
+              Pricing
+            </a>
+            <!-- Navbar item -->
+            <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/about-us']">
+              About us
+            </a>
+            <!-- Navbar item -->
+            <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/services']">
+              Services
+            </a>
+            <!-- Navbar item -->
+            <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/contact-us']">
+              Contact us
+            </a>
+            <!-- Navbar item -->
+            <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/login']">
+              Login
+            </a>
+            <!-- Signup button -->
+            <div class="navbar-item is-button is-centered-tablet">
+              <a id="#signup-btn" [routerLink]="['/register']"
+                class="button button-cta is-bold btn-align primary-btn raised is-rounded">
+                Sign up
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-wrapper navbar-light is-transparent is-static">
+      <div class="container">
+        <!-- Brand -->
+        <div class="navbar-brand">
+          <a class="navbar-item" routerLink="/">
+            <img src="assets/img/logos/bulkit-white.svg" alt="">
+          </a>
+
+          <!-- Sidebar Trigger -->
+          <a id="navigation-trigger" class="navbar-item hamburger-btn" href="javascript:void(0);">
+            <span class="menu-toggle">
+              <span class="icon-box-toggle">
+                <span class="rotate">
+                  <i class="icon-line-top"></i>
+                  <i class="icon-line-center"></i>
+                  <i class="icon-line-bottom"></i>
+                </span>
+              </span>
+            </span>
+          </a>
+
+          <!-- Responsive toggle -->
+          <div class="custom-burger" data-target="is-static">
+            <a class="responsive-btn" href="javascript:void(0);">
+              <span class="menu-toggle">
+                <span class="icon-box-toggle">
+                  <span class="rotate">
+                    <i class="icon-line-top"></i>
+                    <i class="icon-line-center"></i>
+                    <i class="icon-line-bottom"></i>
+                  </span>
+                </span>
+              </span>
+            </a>
+          </div>
+          <!-- /Responsive toggle -->
+        </div>
+
+        <!-- Navbar menu -->
+        <div id="is-static" class="navbar-menu">
+          <!-- Navbar Start -->
+          <div class="navbar-start">
+            <!-- Dropdown -->
+            <div class="navbar-item has-dropdown is-hoverable is-mega is-hidden-mobile">
+              <!--delete later-->
+              <div class="navbar-link">
+                Product
+              </div>
+              <div class="navbar-dropdown is-megamenu animated prefadeInUp fadeInUp" data-style="width: 18rem;">
+                <div class="mega-inner">
+                  <div class="container">
+                    <div class="columns">
+                      <div class="column">
+                        <h2 class="title is-6 is-mega-menu-title">Segmentation</h2>
+                        <a class="navbar-item is-flex" routerLink="/">
+                          <i class="im im-icon-Structure"></i>
+                          <div class="navbar-content">
+                            <p>
+                              <small class="color-primary">Segments</small>
+                            </p>
+                            <p>Segment your customers</p>
+                          </div>
+                        </a>
+                        <a class="navbar-item is-flex" routerLink="/">
+                          <i class="im im-icon-Umbrella-3"></i>
+                          <div class="navbar-content">
+                            <p>
+                              <small class="color-primary">Impact Reports</small>
+                            </p>
+                            <p>Get detailed impact reports</p>
+                          </div>
+                        </a>
+                        <a class="navbar-item is-flex" routerLink="/">
+                          <i class="im im-icon-Mail-Add"></i>
+                          <div class="navbar-content">
+                            <p>
+                              <small class="color-primary">Campaigns</small>
+                            </p>
+                            <p>Targeted Campaigns</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="column">
+                        <h2 class="title is-6 is-mega-menu-title">Lead Generation</h2>
+                        <a class="navbar-item is-flex" routerLink="/">
+                          <i class="im im-icon-Magnifi-Glass2"></i>
+                          <div class="navbar-content">
+                            <p>
+                              <small class="color-primary">Search</small>
+                            </p>
+                            <p>Lead automation digging</p>
+                          </div>
+                        </a>
+                        <a class="navbar-item is-flex" routerLink="/">
+                          <i class="im im-icon-Two-Windows"></i>
+                          <div class="navbar-content">
+                            <p>
+                              <small class="color-primary">Chrome Extension</small>
+                            </p>
+                            <p>Generate more leads</p>
+                          </div>
+                        </a>
+                        <a class="navbar-item is-flex" routerLink="/">
+                          <i class="im im-icon-Flash"></i>
+                          <div class="navbar-content">
+                            <p>
+                              <small class="color-primary">Progress tracker</small>
+                            </p>
+                            <p>Track your progress</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="column">
+                        <h2 class="title is-6 is-mega-menu-title">Deal Management</h2>
+                        <a class="navbar-item is-flex" routerLink="/">
+                          <i class="im im-icon-Sidebar-Window"></i>
+                          <div class="navbar-content">
+                            <p>
+                              <small class="color-primary">Dashboard</small>
+                            </p>
+                            <p>Manage your deals</p>
+                          </div>
+                        </a>
+                        <a class="navbar-item is-flex" routerLink="/">
+                          <i class="im im-icon-Note"></i>
+                          <div class="navbar-content">
+                            <p>
+                              <small class="color-primary">Financial Reports</small>
+                            </p>
+                            <p>Assess your efficiency</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="column">
+                        <h2 class="title is-6 is-mega-menu-title">Get Started</h2>
+                        <p class="is-cta">This is a wonderful menu description item. It can be used as a CTA.</p>
+                        <p class="is-cta">
+                          <a [routerLink]="['/feature']" class="button btn-align mega-btn primary-btn">Learn more</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="navbar-divider">
+                  <div class="navbar-item is-footer is-hidden-mobile">
+                    <div class="navbar-content">
+                      <div class="level is-mobile">
+                        <div class="level-left">
+                          <div class="level-item">
+                            <strong>Follow us</strong>
+                          </div>
+                        </div>
+                        <div class="level-right">
+                          <div class="level-item">
+                            <a class="social-link" routerLink="#"><i class="fa fa-twitter"></i></a>
+                            <a class="social-link" routerLink="/"><i class="fa fa-instagram"></i></a>
+                            <a class="social-link" routerLink="/"><i class="fa fa-facebook"></i></a>
+                            <a class="social-link" routerLink="/"><i class="fa fa-github"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="menu-image is-hidden-mobile">
+                    <img src="assets/img/shapes/megamenu-kit7.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div> <!-- Navbar item -->
+            <!-- <a class="navbar-item is-slide is-centered-tablet is-hidden-desktop is-hidden-tablet"
+              routerLink="kit7-landing.html">
+              Product
+            </a> -->
+
+          </div>
+
+          <!-- Navbar end -->
+          <div class="navbar-end">
+            <!-- Navbar item -->
+            <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/pricing']">
+              Pricing
+            </a>
+            <!-- Navbar item -->
+            <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/about-us']">
+              About us
+            </a>
+            <!-- Navbar item -->
+            <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/services']">
+              Services
+            </a>
+            <!-- Navbar item -->
+            <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/contact-us']">
+              Contact us
+            </a>
+            <!-- Navbar item -->
+            <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/login']">
+              Login
+            </a>
+            <!-- Signup button -->
+            <div class="navbar-item is-button is-centered-tablet">
+              <a id="#signup-btn-double" [routerLink]="['/register']"
+                class="button button-cta is-bold btn-align primary-btn raised is-rounded">
+                Sign up
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Side navigation -->
+    <div class="side-navigation-menu">
+      <!-- Categories menu -->
+      <div class="category-menu-wrapper">
+        <!-- Menu -->
+        <ul class="categories">
+          <li class="square-logo"><img src="assets/img/logos/square-white.svg" alt=""></li>
+          <!-- <li class="category-link is-active" data-navigation-menu="demo-pages"><i class="sl sl-icon-layers"></i></li> -->
+          <!-- <li class="category-link" data-navigation-menu="onepagers"><i class="sl sl-icon-energy"></i></li> -->
+          <li class="category-link" data-navigation-menu="components"><i class="sl sl-icon-grid"></i></li>
+        </ul>
+        <!-- Menu -->
+
+        <ul class="author">
+          <li>
+            <!-- Theme author -->
+            <a routerLink="https://cssninja.io" target="_blank">
+              <img class="main-menu-author" src="assets/img/logos/cssninja.svg" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- /Categories menu -->
+
+      <!-- Navigation menu -->
+      <div id="demo-pages" class="navigation-menu-wrapper animated preFadeInRight fadeInRight is-hidden">
+        <!-- Navigation Header -->
+        <div class="navigation-menu-header">
+          <span>Driver</span>
+          <a class="ml-auto hamburger-btn navigation-close" routerLink="javascript:void(0);">
+            <span class="menu-toggle">
+              <span class="icon-box-toggle">
+                <span class="rotate">
+                  <i class="icon-line-top"></i>
+                  <i class="icon-line-center"></i>
+                  <i class="icon-line-bottom"></i>
+                </span>
+              </span>
+            </span>
+          </a>
+        </div>
+        <!-- Navigation Body -->
+        <ul class="navigation-menu">
+          <li class="has-children"><a class="parent-link" routerLink="/"><span
+                class="material-icons">person</span>Profile</a>
+            <ul>
+              <li><a class="is-submenu" routerLink="/">Homepage</a></li>
+              <li><a class="is-submenu" routerLink="/">About</a></li>
+              <li><a class="is-submenu" routerLink="/">Portfolio</a></li>
+              <li><a class="is-submenu" routerLink="/">Contact</a></li>
+              <li><a class="is-submenu" routerLink="/">Blog</a></li>
+              <li><a class="is-submenu" routerLink="/">Post sidebar</a></li>
+              <li><a class="is-submenu" routerLink="/">Post no sidebar</a></li>
+            </ul>
+          </li>
+          <li class="has-children"><a class="parent-link" routerLink="/"><span
+                class="material-icons">wb_incandescent</span>Current Trips</a>
+            <ul>
+              <li><a class="is-submenu" routerLink="/">Homepage</a></li>
+              <li><a class="is-submenu" routerLink="/">About</a></li>
+              <li><a class="is-submenu" routerLink="/">Product</a></li>
+              <li><a class="is-submenu" routerLink="/">Contact</a></li>
+              <li><a class="is-submenu" routerLink="/login">Login</a></li>
+              <li><a class="is-submenu" routerLink="/">Sign up</a></li>
+            </ul>
+          </li>
+          <li class="has-children"><a class="parent-link" routerLink="/"><span
+                class="material-icons">schedule</span>Scheduled
+              Pickups</a>
+            <ul>
+              <li><a class="is-submenu" routerLink="/">Landing page</a></li>
+              <li><a class="is-submenu" routerLink="/">Feature page</a></li>
+              <li><a class="is-submenu" routerLink="/">Pricing page</a></li>
+              <li><a class="is-submenu" routerLink="/login">Login page</a></li>
+              <li><a class="is-submenu" routerLink="/">Signup page</a></li>
+            </ul>
+          </li>
+          <li class="has-children"><a class="parent-link" routerLink="/"><span
+                class="material-icons">folder</span>Documents</a>
+            <ul>
+              <li><a class="is-submenu" routerLink="/">Landing page</a></li>
+              <li><a class="is-submenu" routerLink="/">Feature page</a></li>
+              <li><a class="is-submenu" routerLink="/">Pricing page</a></li>
+              <li><a class="is-submenu" routerLink="/">Login page</a></li>
+              <li><a class="is-submenu" routerLink="/">Signup page</a></li>
+            </ul>
+          </li>
+          <li class="has-children"><a class="parent-link" routerLink="/"><span
+                class="material-icons">assistant</span>Statistics</a>
+            <ul>
+              <li><a class="is-submenu" routerLink="/">Landing page</a></li>
+              <li><a class="is-submenu" routerLink="/">Feature page</a></li>
+              <li><a class="is-submenu" routerLink="/">Pricing page</a></li>
+              <li><a class="is-submenu" routerLink="/login">Login page</a></li>
+              <li><a class="is-submenu" routerLink="/">Signup page</a></li>
+            </ul>
+          </li>
+          <li class="has-children"><a class="parent-link" routerLink="/"><span
+                class="material-icons">message</span>Messages</a>
+            <ul>
+              <li><a class="is-submenu" routerLink="/">Landing page</a></li>
+              <li><a class="is-submenu" routerLink="/">Pricing page</a></li>
+              <li><a class="is-submenu" routerLink="/">Help center</a></li>
+              <li><a class="is-submenu" routerLink="/">Sign up</a></li>
+              <li><a class="is-submenu" routerLink="/">Help category</a></li>
+              <li><a class="is-submenu" routerLink="/">Help article</a></li>
+              <li><a class="is-submenu" routerLink="/login">Login</a></li>
+            </ul>
+          </li>
+          <li class="has-children"><a class="parent-link" routerLink="/"><span
+                class="material-icons">navigation</span>Navigation</a>
+            <ul>
+              <li><a class="is-submenu has-new-feature" [routerLink]="['/']">Landing page</a>
+              </li>
+              <li><a class="is-submenu has-new-feature" [routerLink]="['/']">Feature
+                  page</a></li>
+              <li><a class="is-submenu has-new-feature" [routerLink]="['/']">Pricing
+                  Page</a></li>
+              <li><a class="is-submenu has-new-feature" [routerLink]="['/']">Login /
+                  Signup</a></li>
+            </ul>
+          </li>
+          <li class="has-children"><a class="parent-link" routerLink="/"><span
+                class="material-icons">settings</span>Settings</a>
+            <ul>
+              <li><a class="is-submenu has-new-update" [routerLink]="['/']">Landing page</a></li>
+              <li><a class="is-submenu has-new-update" [routerLink]="['/']">Landing page
+                  v2</a></li>
+              <li><a class="is-submenu has-new-update" [routerLink]="['/']">Login page</a>
+              </li>
+              <li><a class="is-submenu has-new-update" [routerLink]="['/']">Signup page</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- /Navigation menu -->
+
+      <!-- Navigation menu -->
+      <div id="components" class="navigation-menu-wrapper animated preFadeInRight fadeInRight">
+        <!-- Navigation Header -->
+        <div class="navigation-menu-header">
+          <span>Driver</span>
+          <a class="ml-auto hamburger-btn navigation-close" href="javascript:void(0);">
+            <span class="menu-toggle">
+              <span class="icon-box-toggle">
+                <span class="rotate">
+                  <i class="icon-line-top"></i>
+                  <i class="icon-line-center"></i>
+                  <i class="icon-line-bottom"></i>
+                </span>
+              </span>
+            </span>
+          </a>
+        </div>
+        <!-- Navigation body -->
+        <ul class="navigation-menu">
+          <li class="has-children"><a class="parent-link" [routerLink]="['/']"><span
+                class="material-icons">view_quilt</span>Profile</a>
+            <ul>
+              <li><a class="is-submenu has-new-feature" [routerLink]="['/']">Grid system</a></li>
+              <li><a class="is-submenu" [routerLink]="['/']">Video background</a></li>
+              <li><a class="is-submenu" [routerLink]="['/']">Parallax</a></li>
+              <li><a class="is-submenu" [routerLink]="['/']">Headers</a></li>
+              <li><a class="is-submenu" [routerLink]="['/']">Footers</a></li>
+              <li><a class="is-submenu" [routerLink]="['/']">Colors</a></li>
+            </ul>
+          </li>
+          <li class="has-children"><a class="parent-link" [routerLink]="['/']"><span
+                class="material-icons">subject</span>Current
+              Rides</a>
+            <ul>
+              <li><a class="is-submenu has-new-feature" routerLink="/">Fade
+                  light</a>
+              </li>
+              <li><a class="is-submenu has-new-feature" routerLink="/">Fade
+                  dark</a>
+              </li>
+              <li><a class="is-submenu has-new-feature" routerLink="/">Static
+                  light</a></li>
+              <li><a class="is-submenu has-new-feature" routerLink="/">Static
+                  dark</a></li>
+              <li><a class="is-submenu has-new-feature" routerLink="/">Static
+                  solid</a></li>
+              <li><a class="is-submenu has-new-feature" routerLink="/">Double
+                  dark</a></li>
+              <li><a class="is-submenu has-new-feature" routerLink="/">Double
+                  light</a></li>
+            </ul>
+          </li>
+          <li class="has-children"><a class="parent-link" [routerLink]="['/']"><span
+                class="material-icons">view_stream</span>Scheduled
+              Trips</a>
+            <ul>
+              <li><a class="is-submenu" routerLink="/">Features</a></li>
+              <li><a class="is-submenu" routerLink="/">Pricing</a></li>
+              <li><a class="is-submenu" routerLink="/">Team</a></li>
+              <li><a class="is-submenu" routerLink="/">Testimonials</a></li>
+              <li><a class="is-submenu" routerLink="/">Clients</a></li>
+              <li><a class="is-submenu" routerLink="/">Counters</a></li>
+              <li><a class="is-submenu" routerLink="/">Carousel</a></li>
+            </ul>
+          </li>
+          <li class="has-children"><a class="parent-link has-new" [routerLink]="['/']"><span
+                class="material-icons">playlist_add_check</span>Documents</a>
+            <ul>
+              <li><a class="is-submenu" routerLink="/">Cards</a></li>
+              <li><a class="is-submenu" routerLink="/">Buttons</a></li>
+              <li><a class="is-submenu has-new-feature is-2_5"
+                  routerLink="/_components-basicui-dropdowns.html">Dropdowns</a></li>
+              <li><a class="is-submenu has-new-feature is-2_5" routerLink="/">Lists</a>
+              </li>
+              <li><a class="is-submenu" routerLink="/">Modals</a></li>
+              <li><a class="is-submenu" routerLink="/">Tabs & pills</a></li>
+              <li><a class="is-submenu" routerLink="/">Accordions</a></li>
+              <li><a class="is-submenu" routerLink="/">Badges & labels</a></li>
+              <li><a class="is-submenu" routerLink="/">Popups</a></li>
+            </ul>
+          </li>
+          <li class="has-children"><a class="parent-link has-new" [routerLink]="['/']"><span
+                class="material-icons">playlist_add</span>Statistics</a>
+            <ul>
+              <li><a class="is-submenu" routerLink="/">Tables</a></li>
+              <li><a class="is-submenu" routerLink="/">Timeline</a></li>
+              <li><a class="is-submenu" routerLink="/">Boxes</a></li>
+              <li><a class="is-submenu" routerLink="/">Messages</a></li>
+              <li><a class="is-submenu" routerLink="/">Megamenu</a></li>
+              <li><a class="is-submenu has-new-feature is-2_5" [routerLink]="['/']">Calendar</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-children"><a class="parent-link has-new" [routerLink]="['/']"><span
+                class="material-icons">check_box</span>Messages</a>
+            <ul>
+              <li><a class="is-submenu has-new-feature is-2_5" routerLink="/">Inputs</a>
+              </li>
+              <li><a class="is-submenu has-new-feature is-2_5"
+                  routerLink="/_components-forms-controls.html">Controls</a>
+              </li>
+              <li><a class="is-submenu has-new-feature is-2_5" routerLink="/">Form
+                  layouts</a>
+              </li>
+              <li><a class="is-submenu has-new-feature is-2_5" routerLink="/">Step forms</a>
+              </li>
+              <li><a class="is-submenu" routerLink="/">Uploader</a></li>
+            </ul>
+          </li>
+          <li class="has-children"><a class="parent-link" [routerLink]="['/']"><span
+                class="material-icons">adjust</span>Navigation</a>
+            <ul>
+              <li><a class="is-submenu" routerLink="/">Icons Mind</a></li>
+              <li><a class="is-submenu" routerLink="/">Simple Line Icons</a></li>
+              <li><a class="is-submenu" routerLink="/">Font Awesome</a></li>
+              <li><a class="is-submenu" routerLink="https://material.io/icons/" target="_blank">Material Icons</a></li>
+              <li><a class="is-submenu has-new-feature" routerLink="/">Icon
+                  Picker</a>
+              </li>
+            </ul>
+          </li>
+          <li class="has-children"><a class="parent-link" [routerLink]="['/']"><span
+                class="material-icons">adjust</span>Settings</a>
+            <ul>
+              <li><a class="is-submenu" routerLink="/">Icons Mind</a></li>
+              <li><a class="is-submenu" routerLink="/">Simple Line Icons</a></li>
+              <li><a class="is-submenu" routerLink="/">Font Awesome</a></li>
+              <li><a class="is-submenu" routerLink="https://material.io/icons/" target="_blank">Material Icons</a></li>
+              <li><a class="is-submenu has-new-feature" routerLink="/">Icon
+                  Picker</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- /Navigation menu -->
+      <!-- </div> -->
+      <!-- /Side navigation -->
