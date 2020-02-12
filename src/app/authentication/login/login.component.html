@@ -1,1 +1,109 @@
-<p>login works!</p>
+<!-- <div class="pageloader"></div> -->
+<!-- <div class="infraloader is-active"></div> -->
+<div class="auth-nav">
+  <a [routerLink]="['/home']">
+    <img src="assets/img/logos/bulkit-mauve.svg" alt="">
+  </a>
+</div>
+
+<div class="auth-outer">
+
+  <div class="mobile-auth-toggle">
+    <h3 class="title">Have an account?</h3>
+    <button type="button" class="button action-btn is-rounded">Register</button>
+  </div>
+
+  <div class="auth-box shadow">
+    <div class="form-wrapper">
+      <div class="login">
+        <div class="header">
+          <h2 class="title is-4">Login</h2>
+        </div>
+        <div class="item-list">
+          <div class="item shadow">
+            <a><i class="fa fa-google"></i></a>
+            <a><i class="fa fa-facebook"></i></a>
+            <a><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="body">
+          <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+            <div class="field">
+              <div class="control">
+                <input type="text" class="input" placeholder="Email" ngModel name="email" required email>
+                <div class="form-icon">
+                  <i class="sl sl-icon-envelope-open"></i>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input type="password" class="input" placeholder="Password" ngModel name="password" required
+                  minlength="6">
+                <div class="form-icon">
+                  <i class="sl sl-icon-lock"></i>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="button primary-btn raised is-rounded is-bold">Login</button>
+            <a [routerLink]="['/']" class="forgot-password">
+              Forgot Password?
+            </a>
+          </form>
+        </div>
+      </div>
+      <div class="register">
+        <div class="header">
+          <h2 class="title is-4">Register</h2>
+        </div>
+        <div class="item-list">
+          <div class="item shadow">
+            <a><i class="fa fa-google"></i></a>
+            <a><i class="fa fa-facebook"></i></a>
+            <a><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="body">
+          <form>
+            <div class="field">
+              <div class="control">
+                <input type="text" class="input" placeholder="Username">
+                <div class="form-icon">
+                  <i class="sl sl-icon-user"></i>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input type="text" class="input" placeholder="Email">
+                <div class="form-icon">
+                  <i class="sl sl-icon-envelope-open"></i>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input type="password" class="input" placeholder="Password">
+                <div class="form-icon">
+                  <i class="sl sl-icon-lock"></i>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column">
+              <!-- <button type="submit" class="button primary-btn raised is-rounded is-bold">Register</button> -->
+              <button type="submit" class="button primary-btn raised is-rounded is-bold" [disabled]="!authForm.valid">
+                {{ isLoginMode ? 'Login' : 'Register' }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-box">
+      <h3 class="title is-light">Have an account?</h3>
+      <button type="button" class="button action-btn is-rounded" (click)="onSwitchMode">
+        {{ isLoginMode ? 'Register' : 'Login' }} </button>
+    </div>
+  </div>
+</div>
