@@ -18,7 +18,7 @@ const authRoutes: Routes = [
 ];
 @NgModule({
   declarations: [
-    LoginComponent, 
+    LoginComponent,
     RegisterComponent
   ],
   imports: [
