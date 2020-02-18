@@ -1,32 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LoginComponent } from './authentication/login/login.component';
-import { RegisterComponent } from './authentication/register/register.component';
-
-
 const routes: Routes = [
   {
     path: '',
-    loadChildren: './home/home.module#HomeModule'
+    loadChildren: () => import("./home/home.module").then(d => d.HomeModule)
   },
   {
     path: '',
-    loadChildren: './authentication/authentication.module#AuthenticationModule'
+    loadChildren: () => import("./authentication/authentication.module").then(d => d.AuthenticationModule)
   },
   {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'register',
-    component: RegisterComponent
+    path: 'dashboard',
+    loadChildren: () => import("./main/main.module").then(d => d.MainModule)
   }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, {enableTracing: true})
   ],
   exports: [
     RouterModule

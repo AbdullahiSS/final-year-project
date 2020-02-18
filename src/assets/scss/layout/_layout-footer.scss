@@ -1,0 +1,131 @@
+/*! _footer.scss | Bulkit | CSS Ninja */
+
+/* ==========================================================================
+Footer styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Light medium footer
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Light medium footer
+========================================================================== */
+.footer-light-medium {
+    padding-bottom: 0 !important;
+    padding-top: 4rem !important;
+    background: $light-white;
+
+    .footer-head {
+        padding-bottom: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid darken($fade-grey, 4%);
+
+        .head-text {
+            h3 {
+                font-family: 'Nexa Bold', sans-serif;
+                font-size: 1.8rem;
+                color: $blue-grey;
+            }
+
+            p {
+                font-size: 1.1rem;
+                color: $muted-grey;
+            }
+        }
+
+        .head-action {
+            .buttons {
+                .button {
+                    &.action-button {
+                        height: 36px;
+                        min-width: 140px;
+                    }
+
+                    &.chat-button {
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                        box-shadow: none;
+                        color: $primary;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-body {
+        padding-top: 3rem;
+
+        .footer-column {
+            padding-top: 20px;
+
+            .column-header {
+                font-family: 'Nexa Light', sans-serif;
+                text-transform: uppercase;
+                color: $blue-grey;
+                font-size: 1rem;
+                font-weight: 700;
+                margin: 10px 0;
+            }
+
+            .column-item {
+                padding-bottom: 10px;
+
+                a {
+                    color: $title-grey;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            a {
+                color: $title-grey;
+                margin: 0 5px;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+
+        .footer-description {
+            color: $title-grey;
+        }
+
+        .moto {
+            color: $muted-grey;
+        }
+
+        .small-footer-logo {
+            height: 24px;
+        }
+    }
+
+    .footer-copyright {
+        color: $muted-grey;
+        padding: 4rem 0 2rem 0;
+
+        a {
+            color: $muted-grey;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}
