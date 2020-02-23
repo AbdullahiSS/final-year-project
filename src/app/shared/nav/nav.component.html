@@ -6,8 +6,8 @@
     <div class="container">
       <!-- Brand -->
       <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-          <img src="assets/img/logos/bulkit-mauve.svg" alt="">
+        <a class="navbar-item" [routerLink]="['/']">
+          <img src="assets/img/logos/Saleh/saleh-dark-pink.png" alt="">
         </a>
 
         <!-- Sidebar Trigger -->
@@ -42,158 +42,27 @@
 
       <!-- Navbar menu -->
       <div id="is-cloned" class="navbar-menu">
-        <!-- Navbar Start -->
-        <div class="navbar-start">
-          <!-- Dropdown -->
-          <div class="navbar-item has-dropdown is-hoverable is-mega is-hidden-mobile">
-            <div class="navbar-link">
-              Product
-            </div>
-            <div class="navbar-dropdown is-megamenu animated prefadeInUp fadeInUp" data-style="width: 18rem;">
-              <div class="mega-inner">
-                <div class="container">
-                  <div class="columns">
-                    <div class="column">
-                      <h2 class="title is-6 is-mega-menu-title">Segmentation</h2>
-                      <a class="navbar-item is-flex" href="kit7-landing.html">
-                        <i class="im im-icon-Structure"></i>
-                        <div class="navbar-content">
-                          <p>
-                            <small class="color-primary">Segments</small>
-                          </p>
-                          <p>Segment your customers</p>
-                        </div>
-                      </a>
-                      <a class="navbar-item is-flex" href="kit7-landing.html">
-                        <i class="im im-icon-Umbrella-3"></i>
-                        <div class="navbar-content">
-                          <p>
-                            <small class="color-primary">Impact Reports</small>
-                          </p>
-                          <p>Get detailed impact reports</p>
-                        </div>
-                      </a>
-                      <a class="navbar-item is-flex" href="kit7-landing.html">
-                        <i class="im im-icon-Mail-Add"></i>
-                        <div class="navbar-content">
-                          <p>
-                            <small class="color-primary">Campaigns</small>
-                          </p>
-                          <p>Targeted Campaigns</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="column">
-                      <h2 class="title is-6 is-mega-menu-title">Lead Generation</h2>
-                      <a class="navbar-item is-flex" href="kit7-landing.html">
-                        <i class="im im-icon-Magnifi-Glass2"></i>
-                        <div class="navbar-content">
-                          <p>
-                            <small class="color-primary">Search</small>
-                          </p>
-                          <p>Lead automation digging</p>
-                        </div>
-                      </a>
-                      <a class="navbar-item is-flex" href="kit7-landing.html">
-                        <i class="im im-icon-Two-Windows"></i>
-                        <div class="navbar-content">
-                          <p>
-                            <small class="color-primary">Chrome Extension</small>
-                          </p>
-                          <p>Generate more leads</p>
-                        </div>
-                      </a>
-                      <a class="navbar-item is-flex" href="kit7-landing.html">
-                        <i class="im im-icon-Flash"></i>
-                        <div class="navbar-content">
-                          <p>
-                            <small class="color-primary">Progress tracker</small>
-                          </p>
-                          <p>Track your progress</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="column">
-                      <h2 class="title is-6 is-mega-menu-title">Deal Management</h2>
-                      <a class="navbar-item is-flex" href="kit7-landing.html">
-                        <i class="im im-icon-Sidebar-Window"></i>
-                        <div class="navbar-content">
-                          <p>
-                            <small class="color-primary">Dashboard</small>
-                          </p>
-                          <p>Manage your deals</p>
-                        </div>
-                      </a>
-                      <a class="navbar-item is-flex" href="kit7-landing.html">
-                        <i class="im im-icon-Note"></i>
-                        <div class="navbar-content">
-                          <p>
-                            <small class="color-primary">Financial Reports</small>
-                          </p>
-                          <p>Assess your efficiency</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="column">
-                      <h2 class="title is-6 is-mega-menu-title">Get Started</h2>
-                      <p class="is-cta">This is a wonderful menu description item. It can be
-                        used as a CTA.</p>
-                      <p class="is-cta">
-                        <a href="#" class="button btn-align mega-btn primary-btn">Learn
-                          more</a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <hr class="navbar-divider">
-                <div class="navbar-item is-footer is-hidden-mobile">
-                  <div class="navbar-content">
-                    <div class="level is-mobile">
-                      <div class="level-left">
-                        <div class="level-item">
-                          <strong>Follow us</strong>
-                        </div>
-                      </div>
-                      <div class="level-right">
-                        <div class="level-item">
-                          <a class="social-link" href="#"><i class="fa fa-twitter"></i></a>
-                          <a class="social-link" href="#"><i class="fa fa-facebook"></i></a>
-                          <a class="social-link" href="#"><i class="fa fa-behance"></i></a>
-                          <a class="social-link" href="#"><i class="fa fa-github"></i></a>
-                          <a class="social-link" href="#"><i class="fa fa-tumblr"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="menu-image is-hidden-mobile">
-                  <img src="assets/img/shapes/megamenu-kit7.svg" alt="">
-                </div>
-              </div>
-            </div>
-          </div> <!-- Navbar item -->
-          <a class="navbar-item is-slide is-centered-tablet is-hidden-desktop is-hidden-tablet"
-            href="kit7-landing.html">
-            Product
-          </a>
-
-        </div>
-
         <!-- Navbar end -->
         <div class="navbar-end">
           <!-- Navbar item -->
-          <a class="navbar-item is-slide is-centered-tablet" href="kit7-pricing.html">
-            Pricing
+          <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['services']">
+            Services
           </a>
           <!-- Navbar item -->
-          <a class="navbar-item is-slide is-centered-tablet" href="kit7-authentication.html">
+          <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/about-us']">
+            About
+          </a>
+          <!-- Navbar item -->
+          <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/contact-us']">
+            Contact
+          </a>
+          <!-- Navbar item -->
+          <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/login']">
             Login
           </a>
           <!-- Signup button -->
           <div class="navbar-item is-button is-centered-tablet">
-            <a id="#signup-btn" href="kit7-authentication.html"
+            <a id="#signup-btn" [routerLink]="['/register']"
               class="button button-cta is-bold btn-align primary-btn raised is-rounded">
               Sign up
             </a>
@@ -207,8 +76,8 @@
     <div class="container">
       <!-- Brand -->
       <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-          <img src="assets/img/logos/bulkit-white.svg" alt="">
+        <a class="navbar-item" [routerLink]="['/']">
+          <img src="assets/img/logos/Saleh/saleh-white.png" alt="">
         </a>
 
         <!-- Sidebar Trigger -->
@@ -243,158 +112,27 @@
 
       <!-- Navbar menu -->
       <div id="is-static" class="navbar-menu">
-        <!-- Navbar Start -->
-        <div class="navbar-start">
-          <!-- Dropdown -->
-          <div class="navbar-item has-dropdown is-hoverable is-mega is-hidden-mobile">
-            <div class="navbar-link">
-              Product
-            </div>
-            <div class="navbar-dropdown is-megamenu animated prefadeInUp fadeInUp" data-style="width: 18rem;">
-              <div class="mega-inner">
-                <div class="container">
-                  <div class="columns">
-                    <div class="column">
-                      <h2 class="title is-6 is-mega-menu-title">Segmentation</h2>
-                      <a class="navbar-item is-flex" href="kit7-landing.html">
-                        <i class="im im-icon-Structure"></i>
-                        <div class="navbar-content">
-                          <p>
-                            <small class="color-primary">Segments</small>
-                          </p>
-                          <p>Segment your customers</p>
-                        </div>
-                      </a>
-                      <a class="navbar-item is-flex" href="kit7-landing.html">
-                        <i class="im im-icon-Umbrella-3"></i>
-                        <div class="navbar-content">
-                          <p>
-                            <small class="color-primary">Impact Reports</small>
-                          </p>
-                          <p>Get detailed impact reports</p>
-                        </div>
-                      </a>
-                      <a class="navbar-item is-flex" href="kit7-landing.html">
-                        <i class="im im-icon-Mail-Add"></i>
-                        <div class="navbar-content">
-                          <p>
-                            <small class="color-primary">Campaigns</small>
-                          </p>
-                          <p>Targeted Campaigns</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="column">
-                      <h2 class="title is-6 is-mega-menu-title">Lead Generation</h2>
-                      <a class="navbar-item is-flex" href="kit7-landing.html">
-                        <i class="im im-icon-Magnifi-Glass2"></i>
-                        <div class="navbar-content">
-                          <p>
-                            <small class="color-primary">Search</small>
-                          </p>
-                          <p>Lead automation digging</p>
-                        </div>
-                      </a>
-                      <a class="navbar-item is-flex" href="kit7-landing.html">
-                        <i class="im im-icon-Two-Windows"></i>
-                        <div class="navbar-content">
-                          <p>
-                            <small class="color-primary">Chrome Extension</small>
-                          </p>
-                          <p>Generate more leads</p>
-                        </div>
-                      </a>
-                      <a class="navbar-item is-flex" href="kit7-landing.html">
-                        <i class="im im-icon-Flash"></i>
-                        <div class="navbar-content">
-                          <p>
-                            <small class="color-primary">Progress tracker</small>
-                          </p>
-                          <p>Track your progress</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="column">
-                      <h2 class="title is-6 is-mega-menu-title">Deal Management</h2>
-                      <a class="navbar-item is-flex" href="kit7-landing.html">
-                        <i class="im im-icon-Sidebar-Window"></i>
-                        <div class="navbar-content">
-                          <p>
-                            <small class="color-primary">Dashboard</small>
-                          </p>
-                          <p>Manage your deals</p>
-                        </div>
-                      </a>
-                      <a class="navbar-item is-flex" href="kit7-landing.html">
-                        <i class="im im-icon-Note"></i>
-                        <div class="navbar-content">
-                          <p>
-                            <small class="color-primary">Financial Reports</small>
-                          </p>
-                          <p>Assess your efficiency</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="column">
-                      <h2 class="title is-6 is-mega-menu-title">Get Started</h2>
-                      <p class="is-cta">This is a wonderful menu description item. It can be
-                        used as a CTA.</p>
-                      <p class="is-cta">
-                        <a href="#" class="button btn-align mega-btn primary-btn">Learn
-                          more</a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <hr class="navbar-divider">
-                <div class="navbar-item is-footer is-hidden-mobile">
-                  <div class="navbar-content">
-                    <div class="level is-mobile">
-                      <div class="level-left">
-                        <div class="level-item">
-                          <strong>Follow us</strong>
-                        </div>
-                      </div>
-                      <div class="level-right">
-                        <div class="level-item">
-                          <a class="social-link" href="#"><i class="fa fa-twitter"></i></a>
-                          <a class="social-link" href="#"><i class="fa fa-facebook"></i></a>
-                          <a class="social-link" href="#"><i class="fa fa-behance"></i></a>
-                          <a class="social-link" href="#"><i class="fa fa-github"></i></a>
-                          <a class="social-link" href="#"><i class="fa fa-tumblr"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="menu-image is-hidden-mobile">
-                  <img src="assets/img/shapes/megamenu-kit7.svg" alt="">
-                </div>
-              </div>
-            </div>
-          </div> <!-- Navbar item -->
-          <a class="navbar-item is-slide is-centered-tablet is-hidden-desktop is-hidden-tablet"
-            href="kit7-landing.html">
-            Product
-          </a>
-
-        </div>
-
         <!-- Navbar end -->
         <div class="navbar-end">
           <!-- Navbar item -->
-          <a class="navbar-item is-slide is-centered-tablet" href="kit7-pricing.html">
-            Pricing
+          <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/services']">
+            Services
           </a>
           <!-- Navbar item -->
-          <a class="navbar-item is-slide is-centered-tablet" href="kit7-authentication.html">
+          <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/about-us']">
+            About
+          </a>
+          <!-- Navbar item -->
+          <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/contact-us']">
+            Contact
+          </a>
+          <!-- Navbar item -->
+          <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/login']">
             Login
           </a>
           <!-- Signup button -->
           <div class="navbar-item is-button is-centered-tablet">
-            <a id="#signup-btn-double" href="kit7-authentication.html"
+            <a id="#signup-btn-double" [routerLink]="['/register']"
               class="button button-cta is-bold btn-align primary-btn raised is-rounded">
               Sign up
             </a>
@@ -462,7 +200,7 @@
   <!-- /Categories menu -->
 
   <!-- Navigation menu -->
-  <div id="demo-pages" class="navigation-menu-wrapper animated preFadeInRight fadeInRight">
+  <div id="demo-pages" class="navigation-menu-wrapper animated preFadeInRight fadeInRight is-hidden">
     <!-- Navigation Header -->
     <div class="navigation-menu-header">
       <span>Demo pages</span>
@@ -603,7 +341,7 @@
   </div>
   <!-- /Navigation menu -->
   <!-- Navigation menu -->
-  <div id="onepagers" class="navigation-menu-wrapper animated preFadeInRight fadeInRight is-hidden">
+  <div id="onepagers" class="navigation-menu-wrapper animated preFadeInRight fadeInRight">
     <!-- Navigation Header -->
     <div class="navigation-menu-header">
       <span>One Pagers</span>
@@ -639,7 +377,7 @@
     </ul>
   </div>
   <!-- Navigation menu -->
-  <div id="components" class="navigation-menu-wrapper animated preFadeInRight fadeInRight is-hidden">
+  <div id="components" class="navigation-menu-wrapper animated preFadeInRight fadeInRight">
     <!-- Navigation Header -->
     <div class="navigation-menu-header">
       <span>Components</span>

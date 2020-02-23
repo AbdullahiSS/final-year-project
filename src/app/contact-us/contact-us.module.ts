@@ -5,7 +5,7 @@ import { ContactUsComponent } from './contact-us.component';
 
 const contactRoutes: Routes = [
   {
-    path: '',
+    path: 'contact-us',
     component: ContactUsComponent
   }
 ]

@@ -8,9 +8,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AuthenticationModule } from './authentication/authentication.module';
 import { HomeModule } from './home/home.module';
+import { ServicesModule } from './services/services.module';
 import { AboutUsModule } from './about-us/about-us.module';
 import { ContactUsModule } from './contact-us/contact-us.module';
-import { ServicesModule } from './services/services.module';
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
@@ -26,12 +26,11 @@ import { SharedModule } from './shared/shared.module';
     AuthenticationModule,
     SharedModule,
     HomeModule,
+    ServicesModule,
     AboutUsModule,
     ContactUsModule,
-    ServicesModule,
     HttpClientModule
   ],
-  
   providers: [],
   bootstrap: [AppComponent]
 })
