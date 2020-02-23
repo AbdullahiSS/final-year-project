@@ -29,15 +29,14 @@
             ],
             "styles": [
               "src/app/styles/styles.sass",
-              "src/assets/scss/abstracts/_layout-colors.scss",
               "src/assets/scss/abstracts/_themes-kit7.scss",
+              "src/assets/scss/abstracts/_layout-colors.scss",
               "src/assets/scss/layout/_layout-navigation.scss",
               "src/assets/scss/core_kit7.scss"
             ],
             "scripts": [
               "src/assets/js/auth.js",
-              "src/assets/js/main.js",
-              "src/assets/js/functions.js"
+              "src/assets/js/main.js"
             ]
           },
           "configurations": {

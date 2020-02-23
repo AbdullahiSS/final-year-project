@@ -18,7 +18,7 @@ function initPageLoader() {
 
 function disableSidebarLinks() {
   $('.navigation-menu .is-submenu').each(function () {
-    $(this).attr('href', 'javascript:void(0);');
+    $(this).attr('routerLink', 'javascript:void(0);');
   });
 } //Change demo images
 
