@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ServicesComponent } from './services/services.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
-import { AboutUsComponent } from './about-us/about-us.component';
 
 
 const routes: Routes = [
@@ -19,29 +16,17 @@ const routes: Routes = [
     loadChildren: () => import ("./about-us/about-us.module").then(d => d.AboutUsModule)  
   },
   {
-    path: 'contact-us',
-    loadChildren: () => import ("./contact-us/contact-us.module").then(d => d.ContactUsModule)
+    path: 'contact-us', loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
   },
-  // {
-  //   path: 'services',
-  //   component: ServicesComponent
-  // },
-  // {
-  //   path: 'about-us',
-  //   component: AboutUsComponent
-  // },
-  // {
-  //   path: 'contact-us',
-  //   component: ContactUsComponent
-  // },
   {
-    path: 'authentication',
+    path: '',
     loadChildren: () => import("./authentication/authentication.module").then(d => d.AuthenticationModule)
   },
   {
     path: 'dashboard',
     loadChildren: () => import("./main/main.module").then(d => d.MainModule)
   },
+  // { path: 'contactus', loadChildren: () => import('./contact-us1/contact-us1.module').then(m => m.ContactUs1Module) }
 ];
 
 @NgModule({

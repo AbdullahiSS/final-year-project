@@ -1,6 +1,8 @@
 <p>side-nav works!</p>
 <!-- Side navigation -->
-<div class="side-navigation-menu">
+<div class="side-navigation-menu" [class.expanded]="state === 'expanded'" 
+[class.compact]="state === 'compact'"
+[class.collapsed]="state === 'collapsed'">
     <!-- Categories menu -->
     <div class="category-menu-wrapper">
         <!-- Menu -->

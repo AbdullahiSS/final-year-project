@@ -1,8 +1,6 @@
-<!-- <div class="pageloader"></div> -->
-<!-- <div class="infraloader is-active"></div> -->
 <div class="auth-nav">
   <a [routerLink]="['/home']">
-    <img src="assets/img/logos/bulkit-mauve.svg" alt="">
+    <img src="../../../assets/img/logos/Saleh/saleh-dark-pink.png" alt="">
   </a>
 </div>
 
@@ -26,75 +24,57 @@
             <a><i class="fa fa-linkedin"></i></a>
           </div>
         </div>
+
         <div class="body">
-          <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div class="field">
+              <div class="level form-group">
+                <label class="label level-item has-level-item-centered title is-5">Account User</label>
+              </div>
+              <div class="control has-icons-left">
+                <div class="select">
+                  <select>
+                    <!-- <option class="selected"> Account User </option> -->
+                    <option value="Driver">Driver</option>
+                    <option value="Customer">Customer</option>
+                  </select>
+                </div>
+                <div class="icon is-small is-left">
+                  <i class="fas fa-user"></i>
+                </div>
+              </div>
+            </div>
+            <div class="field is-grouped">
               <div class="control">
-                <input type="text" class="input" placeholder="Email" ngModel name="email" required email>
+                <!-- <input type="email" class="input form-control" formControlName="email" placeholder="Email"> -->
+                <input type="email" class="input" formControlName="email" placeholder="Email">
+                <!-- <span *ngIf="!loginForm.get(email).valid && loginForm.get(email).touched" class="help is-success">Please
+                  enter a valid email address!</span> -->
                 <div class="form-icon">
                   <i class="sl sl-icon-envelope-open"></i>
                 </div>
               </div>
             </div>
-            <div class="field">
+            <div class="field ">
               <div class="control">
-                <input type="password" class="input" placeholder="Password" ngModel name="password" required
-                  minlength="6">
+                <input type="text" id="password" class="input form-control" formControlName="password"
+                  placeholder="Password">
+                <!-- <span *ngIf="!loginForm.get(password).valid && loginForm.get(password).touched"
+                  class="help is-success">Please enter a valid password! -->
+                  <!-- <span *ngIf="loginForm.get(password).errors['nameIsForbidden']">This name is
+                    invalid!</span> -->
+                  <!-- <span *ngIf="loginForm.get(password).errors['required']">This field is required!</span> -->
+                <!-- </span> -->
+
                 <div class="form-icon">
                   <i class="sl sl-icon-lock"></i>
                 </div>
               </div>
             </div>
+            <span *ngIf="!loginForm.valid && loginForm.touched" class="help is-success">Please enter valid
+              data!</span>
             <button type="submit" class="button primary-btn raised is-rounded is-bold">Login</button>
-            <a [routerLink]="['/']" class="forgot-password">
-              Forgot Password?
-            </a>
-          </form>
-        </div>
-      </div>
-      <div class="register">
-        <div class="header">
-          <h2 class="title is-4">Register</h2>
-        </div>
-        <div class="item-list">
-          <div class="item shadow">
-            <a><i class="fa fa-google"></i></a>
-            <a><i class="fa fa-facebook"></i></a>
-            <a><i class="fa fa-linkedin"></i></a>
-          </div>
-        </div>
-        <div class="body">
-          <form>
-            <div class="field">
-              <div class="control">
-                <input type="text" class="input" placeholder="Username">
-                <div class="form-icon">
-                  <i class="sl sl-icon-user"></i>
-                </div>
-              </div>
-            </div>
-            <div class="field">
-              <div class="control">
-                <input type="text" class="input" placeholder="Email">
-                <div class="form-icon">
-                  <i class="sl sl-icon-envelope-open"></i>
-                </div>
-              </div>
-            </div>
-            <div class="field">
-              <div class="control">
-                <input type="password" class="input" placeholder="Password">
-                <div class="form-icon">
-                  <i class="sl sl-icon-lock"></i>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex flex-column">
-              <!-- <button type="submit" class="button primary-btn raised is-rounded is-bold">Register</button> -->
-              <button type="submit" class="button primary-btn raised is-rounded is-bold" [disabled]="!authForm.valid">
-                {{ isLoginMode ? 'Login' : 'Register' }}
-              </button>
-            </div>
+            <a href="" class="forgot-password">Forgot Password?</a>
           </form>
         </div>
       </div>

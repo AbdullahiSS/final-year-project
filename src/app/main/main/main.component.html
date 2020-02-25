@@ -1,6 +1,11 @@
 <main>
-    <main-side-nav></main-side-nav>
+    <div>
+        <main-side-nav [initialState]="'expanded'"
+            ></main-side-nav>
+    </div>
 
+    <!-- main body with router outlet -->
+    <!-- All child routed components appear here -->
     <section>
         <main-header></main-header>
         <router-outlet></router-outlet>

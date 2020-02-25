@@ -18,7 +18,7 @@ function initPageLoader() {
 
 function disableSidebarLinks() {
   $('.navigation-menu .is-submenu').each(function () {
-    $(this).attr('routerLink', 'javascript:void(0);');
+    $(this).attr('href', 'javascript:void(0);');
   });
 } //Change demo images
 
@@ -148,6 +148,7 @@ function initSidebar() {
   }); //Sidebar close button
 
   $('.hamburger-btn').on("click", function () {
+    console.log('test...');
     $('#navigation-trigger .menu-toggle .icon-box-toggle, .navigation-close .menu-toggle .icon-box-toggle, .navigation-trigger .menu-toggle .icon-box-toggle, .navigation-close .menu-toggle .icon-box-toggle').toggleClass('active');
   }); //Menu buttons sync
 

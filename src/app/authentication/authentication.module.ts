@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -17,16 +18,20 @@ const authRoutes: Routes = [
     component: RegisterComponent
   }
 ];
+
 @NgModule({
   declarations: [
-    LoginComponent,
+    LoginComponent, 
     RegisterComponent
   ],
   imports: [
     CommonModule,
-    FormsModule,
     ReactiveFormsModule,
-    RouterModule.forChild(authRoutes)
+    RouterModule.forChild(authRoutes),
+    HttpClientModule
+  ], 
+  exports: [
+    RouterModule
   ]
 })
 export class AuthenticationModule { }

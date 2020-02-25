@@ -8,14 +8,23 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { HomeComponent } from './home.component';
 import { HeroComponent } from './hero/hero.component';
 import { FeatureComponent } from './feature/feature.component';
+import { ServicesComponent } from '../services/services.component';
 
 
 const homeRoutes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
     path:'home',
     component: HomeComponent
-  }
+  },
+  {
+    path: 'hero',
+    component: HeroComponent
+  },
+  {
+    path: 'features',
+    component: FeatureComponent
+  },
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -29,6 +38,9 @@ const homeRoutes: Routes = [
     ReactiveFormsModule,
     CommonModule,
     SharedModule
+  ],
+  exports: [
+    RouterModule
   ]
 })
 export class HomeModule { }
