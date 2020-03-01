@@ -8,12 +8,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AuthenticationModule } from './authentication/authentication.module';
 import { HomeModule } from './home/home.module';
-
-import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { ServicesModule } from './services/services.module';
 import { AboutUsModule } from './about-us/about-us.module';
 
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
