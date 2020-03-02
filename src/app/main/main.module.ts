@@ -5,25 +5,27 @@ import { Routes, RouterModule } from '@angular/router'
 import { MainComponent } from './main/main.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { ReportingComponent } from './reporting/reporting.component';
-import { OverviewComponent } from './overview/overview.component';
 import { HeaderComponent } from './header/header.component';
 import { MessagesComponent } from './messages/messages.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { DocumentsComponent } from './documents/documents.component';
+import { SettingsComponent } from './settings/settings.component'
+
 import { SharedModule } from '../shared/shared.module';
 
 const mainRoutes: Routes = [
   {
-    path: "",
+    path: '',
     component: MainComponent,
     children: [
       {
-        path: "dashboard",
+        path: '',
         component: DashboardComponent
       },
       {
-        path: "side-nav",
-        component: SideNavComponent
+        path: 'documents',
+        component: DocumentsComponent
       },
       {
         path: "messages",
@@ -32,10 +34,28 @@ const mainRoutes: Routes = [
       {
         path: "navigation",
         component: NavigationComponent
+      },
+      {
+        path: "reporting",
+        component: ReportingComponent
+      },
+      {
+        path: 'settings',
+        component: SettingsComponent
+      },
+      {
+        path: '',
+        redirectTo: '/main',
+        pathMatch: 'full'
       }
     ]
+  },
+  {
+    path: '',
+    redirectTo: '/main',
+    pathMatch: 'full'
   }
-]
+];
 
 @NgModule({
   declarations: [
@@ -43,15 +63,19 @@ const mainRoutes: Routes = [
     DashboardComponent,
     SideNavComponent,
     ReportingComponent,
-    OverviewComponent,
     HeaderComponent,
     MessagesComponent,
-    NavigationComponent
+    NavigationComponent,
+    DocumentsComponent,
+    SettingsComponent
   ],
   imports: [
-    CommonModule,
     RouterModule.forChild(mainRoutes),
+    CommonModule,
     SharedModule
+  ],
+  exports: [
+    RouterModule
   ]
 })
 export class MainModule { }

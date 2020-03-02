@@ -21,7 +21,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   ],
   exports: [
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    SidebarComponent
   ]
 })
 export class SharedModule { }

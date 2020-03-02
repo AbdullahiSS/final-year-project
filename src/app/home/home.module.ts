@@ -8,7 +8,6 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { HomeComponent } from './home.component';
 import { HeroComponent } from './hero/hero.component';
 import { FeatureComponent } from './feature/feature.component';
-import { ServicesComponent } from '../services/services.component';
 
 
 const homeRoutes: Routes = [

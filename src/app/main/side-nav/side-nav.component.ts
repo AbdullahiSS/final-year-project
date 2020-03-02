@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+
 @Component({
   selector: 'main-side-nav',
   templateUrl: './side-nav.component.html',

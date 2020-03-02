@@ -1,313 +1,117 @@
 <!-- Hero and Navbar -->
 <div class="hero main-hero is-medium-with-navbar">
 
-<!-- Navbar partial -->
-<nav class="navbar navbar-wrapper is-cloned">
-  <div class="container">
-    <!-- Brand -->
-    <div class="navbar-brand">
-      <a class="navbar-item" [routerLink]="['/']">
-        <img src="assets/img/logos/Saleh/saleh-dark-pink.png" alt="">
-      </a>
-
-      <!-- Sidebar Trigger -->
-      <!-- <a class="navbar-item hamburger-btn navigation-trigger" href="javascript:void(0);">
-        <span class="menu-toggle">
-          <span class="icon-box-toggle">
-            <span class="rotate">
-              <i class="icon-line-top"></i>
-              <i class="icon-line-center"></i>
-              <i class="icon-line-bottom"></i>
-            </span>
-          </span>
-        </span>
-      </a> -->
-
-      <!-- Responsive toggle -->
-      <div class="custom-burger" data-target="is-cloned">
-        <a class="responsive-btn" href="javascript:void(0);">
-          <span class="menu-toggle">
-            <span class="icon-box-toggle">
-              <span class="rotate">
-                <i class="icon-line-top"></i>
-                <i class="icon-line-center"></i>
-                <i class="icon-line-bottom"></i>
+  <!-- Navbar partial -->
+  <nav class="navbar navbar-wrapper is-cloned">
+    <div class="container">
+      <!-- Brand -->
+      <div class="navbar-brand">
+        <a class="navbar-item" [routerLink]="['/']">
+          <img src="assets/img/logos/Saleh/saleh-dark-pink.png" alt="">
+        </a>
+        <!-- Responsive toggle -->
+        <div class="custom-burger" data-target="is-cloned">
+          <a class="responsive-btn" href="javascript:void(0);">
+            <span class="menu-toggle">
+              <span class="icon-box-toggle">
+                <span class="rotate">
+                  <i class="icon-line-top"></i>
+                  <i class="icon-line-center"></i>
+                  <i class="icon-line-bottom"></i>
+                </span>
               </span>
             </span>
-          </span>
-        </a>
-      </div>
-      <!-- /Responsive toggle -->
-    </div>
-
-    <!-- Navbar menu -->
-    <div id="is-cloned" class="navbar-menu">
-      <!-- Navbar end -->
-      <div class="navbar-end">
-        <!-- Navbar item -->
-        <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/services']">
-          Services
-        </a>
-        <!-- Navbar item -->
-        <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/about-us']">
-          About
-        </a>
-        <!-- Navbar item -->
-        <a class="navbar-item is-slide is-centered-tablet" routerLink="/contact-us">
-          Contact
-        </a>
-        <!-- Navbar item -->
-        <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/login']">
-          Login
-        </a>
-        <!-- Signup button -->
-        <div class="navbar-item is-button is-centered-tablet">
-          <a id="#signup-btn" [routerLink]="['/register']"
-            class="button button-cta is-bold btn-align primary-btn raised is-rounded">
-            Sign up
           </a>
+        </div>
+        <!-- /Responsive toggle -->
+      </div>
+
+      <!-- Navbar menu -->
+      <div id="is-cloned" class="navbar-menu">
+        <!-- Navbar end -->
+        <div class="navbar-end">
+          <!-- Navbar item -->
+          <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/services']">
+            Services
+          </a>
+          <!-- Navbar item -->
+          <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/about-us']">
+            About
+          </a>
+          <!-- Navbar item -->
+          <a class="navbar-item is-slide is-centered-tablet" routerLink="/contact-us">
+            Contact
+          </a>
+          <!-- Navbar item -->
+          <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/login']">
+            Login
+          </a>
+          <!-- Signup button -->
+          <div class="navbar-item is-button is-centered-tablet">
+            <a id="#signup-btn" [routerLink]="['/register']"
+              class="button button-cta is-bold btn-align primary-btn raised is-rounded">
+              Sign up
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<nav class="navbar navbar-wrapper navbar-light is-transparent is-static">
-  <div class="container">
-    <!-- Brand -->
-    <div class="navbar-brand">
-      <a class="navbar-item" [routerLink]="['/']">
-        <img src="assets/img/logos/Saleh/saleh-white.png" alt="">
-      </a>
-
-      <!-- Sidebar Trigger -->
-      <a id="navigation-trigger" class="navbar-item hamburger-btn" href="javascript:void(0);">
-        <span class="menu-toggle">
-          <span class="icon-box-toggle">
-            <span class="rotate">
-              <i class="icon-line-top"></i>
-              <i class="icon-line-center"></i>
-              <i class="icon-line-bottom"></i>
-            </span>
-          </span>
-        </span>
-      </a>
-
-      <!-- Responsive toggle -->
-      <div class="custom-burger" data-target="is-static">
-        <a class="responsive-btn" href="javascript:void(0);">
-          <span class="menu-toggle">
-            <span class="icon-box-toggle">
-              <span class="rotate">
-                <i class="icon-line-top"></i>
-                <i class="icon-line-center"></i>
-                <i class="icon-line-bottom"></i>
+  <nav class="navbar navbar-wrapper navbar-light is-transparent is-static">
+    <div class="container">
+      <!-- Brand -->
+      <div class="navbar-brand">
+        <a class="navbar-item" [routerLink]="['/']">
+          <img src="assets/img/logos/Saleh/saleh-white.png" alt="">
+        </a>
+        <!-- Responsive toggle -->
+        <div class="custom-burger" data-target="is-static">
+          <a class="responsive-btn" href="javascript:void(0);">
+            <span class="menu-toggle">
+              <span class="icon-box-toggle">
+                <span class="rotate">
+                  <i class="icon-line-top"></i>
+                  <i class="icon-line-center"></i>
+                  <i class="icon-line-bottom"></i>
+                </span>
               </span>
             </span>
-          </span>
-        </a>
-      </div>
-      <!-- /Responsive toggle -->
-    </div>
-
-    <!-- Navbar menu -->
-    <div id="is-static" class="navbar-menu">
-      <!-- Navbar end -->
-      <div class="navbar-end">
-        <!-- Navbar item -->
-        <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/services']">
-          Services
-        </a>
-        <!-- Navbar item -->
-        <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/about-us']">
-          About
-        </a>
-        <!-- Navbar item -->
-        <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/contact-us']">
-          Contact
-        </a>
-        <!-- Navbar item -->
-        <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/login']">
-          Login
-        </a>
-        <!-- Signup button -->
-        <div class="navbar-item is-button is-centered-tablet">
-          <a id="#signup-btn-double" [routerLink]="['/register']"
-            class="button button-cta is-bold btn-align primary-btn raised is-rounded">
-            Sign up
           </a>
+        </div>
+        <!-- /Responsive toggle -->
+      </div>
+
+      <!-- Navbar menu -->
+      <div id="is-static" class="navbar-menu">
+        <!-- Navbar end -->
+        <div class="navbar-end">
+          <!-- Navbar item -->
+          <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/services']">
+            Services
+          </a>
+          <!-- Navbar item -->
+          <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/about-us']">
+            About
+          </a>
+          <!-- Navbar item -->
+          <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/contact-us']">
+            Contact
+          </a>
+          <!-- Navbar item -->
+          <a class="navbar-item is-slide is-centered-tablet" [routerLink]="['/login']">
+            Login
+          </a>
+          <!-- Signup button -->
+          <div class="navbar-item is-button is-centered-tablet">
+            <a id="#signup-btn-double" [routerLink]="['/register']"
+              class="button button-cta is-bold btn-align primary-btn raised is-rounded">
+              Sign up
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</nav>
-<!-- </div> -->
-
-<!-- Side navigation -->
-<div class="side-navigation-menu">
-  <!-- Categories menu -->
-  <div class="category-menu-wrapper">
-    <!-- Menu -->
-    <ul class="categories">
-      <li class="square-logo"><img src="assets/img/logos/square-white.svg" alt=""></li>
-      <li class="category-link is-active" data-navigation-menu="demo-pages"><i class="sl sl-icon-layers"></i></li>
-      <!-- <li class="category-link" data-navigation-menu="onepagers"><i class="sl sl-icon-energy"></i></li>
-      <li class="category-link" data-navigation-menu="components"><i class="sl sl-icon-grid"></i></li> -->
-    </ul>
-    <!-- Menu -->
-
-    <ul class="author">
-      <li>
-        <!-- Theme author -->
-        <a href="https://cssninja.io" target="_blank">
-          <img class="main-menu-author" src="assets/img/logos/cssninja.svg" alt="">
-        </a>
-      </li>
-    </ul>
-  </div>
-  <!-- /Categories menu -->
-
-  <!-- Navigation menu -->
-  <div id="demo-pages" class="navigation-menu-wrapper animated preFadeInRight fadeInRight">
-    <!-- Navigation Header -->
-    <div class="navigation-menu-header">
-      <span>Driver</span>
-      <a class="ml-auto hamburger-btn navigation-close" href="javascript:void(0);">
-        <span class="menu-toggle">
-          <span class="icon-box-toggle">
-            <span class="rotate">
-              <i class="icon-line-top"></i>
-              <i class="icon-line-center"></i>
-              <i class="icon-line-bottom"></i>
-            </span>
-          </span>
-        </span>
-      </a>
-    </div>
-    <!-- Navigation Body -->
-    <ul class="navigation-menu">
-      <li class="has-children"><a class="parent-link" [routerLink]="['/']"><span
-            class="material-icons">person</span>Profile</a>
-        <ul>
-          <li><a class="is-submenu" routerLink="/">Homepage</a></li>
-          <li><a class="is-submenu" routerLink="/">About</a></li>
-          <li><a class="is-submenu" routerLink="/">Portfolio</a></li>
-          <li><a class="is-submenu" routerLink="/">Contact</a></li>
-        </ul>
-      </li>
-      <li class="has-children"><a class="parent-link" href="#"><span
-            class="material-icons">wb_incandescent</span>Current Trip</a>
-        <ul>
-          <li><a class="is-submenu" href="/startup/index.html">Homepage</a></li>
-          <li><a class="is-submenu" href="/startup/startup-about.html">About</a></li>
-          <li><a class="is-submenu" href="/startup/startup-product.html">Product</a></li>
-          <li><a class="is-submenu" href="/startup/startup-contact.html">Contact</a></li>
-        </ul>
-      </li>
-      <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">schedule</span>Scheduled
-          Pickups</a>
-        <ul>
-          <li><a class="is-submenu" href="/landing-kits/kit-1/index.html">Landing page</a></li>
-          <li><a class="is-submenu" href="/landing-kits/kit-1/kit1-features.html">Feature page</a></li>
-        </ul>
-      </li>
-      <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">folder</span>Documents</a>
-        <ul>
-          <li><a class="is-submenu" href="/landing-kits/kit-2/index.html">Landing page</a></li>
-          <li><a class="is-submenu" href="/landing-kits/kit-2/kit2-features.html">Feature page</a></li>
-        </ul>
-      </li>
-      <li class="has-children"><a class="parent-link" href="#"><span
-            class="material-icons">assistant</span>Reporting</a>
-        <ul>
-          <li><a class="is-submenu" href="/landing-kits/kit-3/index.html">Landing page</a></li>
-        </ul>
-      </li>
-      <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">message</span>Messages</a>
-        <ul>
-          <li><a class="is-submenu" href="/landing-kits/kit-4/index.html">Landing page</a></li>
-          <li><a class="is-submenu" href="/landing-kits/kit-4/kit4-pricing.html">Pricing page</a></li>
-        </ul>
-      </li>
-      <li class="has-children"><a class="parent-link" href="#"><span
-            class="material-icons">navigation</span>Navigation</a>
-        <ul>
-          <li><a class="is-submenu has-new-feature" href="/landing-kits/kit-5/index.html">Landing page</a></li>
-        </ul>
-      </li>
-      <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">settings</span>Settings</a>
-        <ul>
-          <li><a class="is-submenu has-new-update" href="/landing-kits/kit-6/index.html">Landing page</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <!-- /Navigation menu -->
-
-  <!-- Navigation menu -->
-  <div id="components" class="navigation-menu-wrapper animated preFadeInRight fadeInRight is-hidden">
-    <!-- Navigation Header -->
-    <div class="navigation-menu-header">
-      <span>Driver</span>
-      <a class="ml-auto hamburger-btn navigation-close" href="javascript:void(0);">
-        <span class="menu-toggle">
-          <span class="icon-box-toggle">
-            <span class="rotate">
-              <i class="icon-line-top"></i>
-              <i class="icon-line-center"></i>
-              <i class="icon-line-bottom"></i>
-            </span>
-          </span>
-        </span>
-      </a>
-    </div>
-    <!-- Navigation body -->
-    <ul class="navigation-menu">
-      <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">view_quilt</span>Layout</a>
-        <ul>
-          <li><a class="is-submenu has-new-feature" href="/_components-layout-grid.html">Grid system</a></li>
-        </ul>
-      </li>
-      <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">subject</span>Navbars</a>
-        <ul>
-          <li><a class="is-submenu has-new-feature" href="/_components-layout-navbar-fade-light.html">Fade light</a>
-          </li>
-        </ul>
-      </li>
-      <li class="has-children"><a class="parent-link" href="#"><span
-            class="material-icons">view_stream</span>Sections</a>
-        <ul>
-          <li><a class="is-submenu" href="/_components-sections-features.html">Features</a></li>
-          <li><a class="is-submenu" href="/_components-sections-pricing.html">Pricing</a></li>
-        </ul>
-      </li>
-      <li class="has-children"><a class="parent-link has-new" href="#"><span
-            class="material-icons">playlist_add_check</span>Basic
-          UI</a>
-        <ul>
-          <li><a class="is-submenu" href="/_components-basicui-cards.html">Cards</a></li>
-        </ul>
-      </li>
-      <li class="has-children"><a class="parent-link has-new" href="#"><span
-            class="material-icons">playlist_add</span>Advanced
-          UI</a>
-        <ul>
-          <li><a class="is-submenu" href="/_components-advancedui-tables.html">Tables</a></li>
-          <li><a class="is-submenu" href="/_components-advancedui-timeline.html">Timeline</a></li>
-        </ul>
-      </li>
-      <li class="has-children"><a class="parent-link has-new" href="#"><span
-            class="material-icons">check_box</span>Forms</a>
-        <ul>
-          <li><a class="is-submenu has-new-feature is-2_5" href="/_components-forms-inputs.html">Inputs</a></li>
-        </ul>
-      </li>
-      <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">adjust</span>Icons</a>
-        <ul>
-          <li><a class="is-submenu" href="/_components-icons-im.html">Icons Mind</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <!-- /Navigation menu -->
+  </nav>
+  <!-- </div> -->
 </div>

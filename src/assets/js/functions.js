@@ -1,24 +1,8 @@
 "use strict";
-
-//Init pageloader
-function initPageLoader() {
-  $('.pageloader').toggleClass('is-active');
-  $(window).on('load', function () {
-    var pageloaderTimeout = setTimeout(function () {
-      $('.pageloader').toggleClass('is-active');
-      $('.infraloader').toggleClass('is-active');
-      clearTimeout(pageloaderTimeout);
-      setTimeout(function () {
-        $('.rounded-hero').addClass('is-active');
-      }, 350);
-    }, 700);
-  });
-} //Disable sidebar links in development
-
-
+ //Disable sidebar links in development
 function disableSidebarLinks() {
   $('.navigation-menu .is-submenu').each(function () {
-    $(this).attr('href', 'javascript:void(0);');
+    $(this).attr('routerLink', 'javascript:void(0);');
   });
 } //Change demo images
 
@@ -102,7 +86,7 @@ function initMobileMenu() {
 
 function highlightNavbarLinks() {
   // Get current page URL
-  var url = window.location.href; // remove # from URL
+  var url = window.location.routerLink; // remove # from URL
 
   url = url.substring(0, url.indexOf("#") == -1 ? url.length : url.indexOf("#")); // remove parameters from URL
 
@@ -116,10 +100,10 @@ function highlightNavbarLinks() {
 
 
   $('.nav .navbar-item, li.has-children ul li a.is-submenu, a.footer-nav-link').each(function () {
-    // select href
-    var href = $(this).attr('href'); // Check filename
+    // select routerLink
+    var routerLink = $(this).attr('routerLink'); // Check filename
 
-    if (url == href) {
+    if (url == routerLink) {
       // Add active class
       $(this).addClass('is-active');
     }
@@ -311,8 +295,8 @@ function initGitem() {
 
 
 function initScrollToHash() {
-  $('a[href*="#"]') // Remove links that don't actually link to anything
-  .not('[href="#"]').not('[href="#0"]').on('click', function (event) {
+  $('a[routerLink*="#"]') // Remove links that don't actually link to anything
+  .not('[routerLink="#"]').not('[routerLink="#0"]').on('click', function (event) {
     // On-page links
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       // Figure out element to scroll to

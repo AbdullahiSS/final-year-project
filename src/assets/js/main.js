@@ -9,7 +9,7 @@ $(document).ready(function ($) {
   initNavbar();
   initMobileMenu();
   highlightNavbarLinks();
-  // initSidebar();
+  initSidebar();
   initPopovers();
   initTooltips();
   initBackgroundImages();
