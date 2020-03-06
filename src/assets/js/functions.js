@@ -88,7 +88,7 @@ function highlightNavbarLinks() {
   // Get current page URL
   var url = window.location.routerLink; // remove # from URL
 
-  url = url.substring(0, url.indexOf("#") == -1 ? url.length : url.indexOf("#")); // remove parameters from URL
+  url = url.substring(0, url.indexOf("") == -1 ? url.length : url.indexOf("")); // remove parameters from URL
 
   url = url.substring(0, url.indexOf("?") == -1 ? url.length : url.indexOf("?")); // select file name
 

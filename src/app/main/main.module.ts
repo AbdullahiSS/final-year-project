@@ -1,6 +1,8 @@
 import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router'
+import { AgmCoreModule } from '@agm/core';
+import { environment } from '../../environments/environment';
 
 import { MainComponent } from './main/main.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
@@ -13,6 +15,8 @@ import { DocumentsComponent } from './documents/documents.component';
 import { SettingsComponent } from './settings/settings.component'
 
 import { SharedModule } from '../shared/shared.module';
+import { DirectionsMapDirective } from './directions-map.directive';
+
 
 const mainRoutes: Routes = [
   {
@@ -20,7 +24,7 @@ const mainRoutes: Routes = [
     component: MainComponent,
     children: [
       {
-        path: '',
+        path: 'dashboard',
         component: DashboardComponent
       },
       {
@@ -67,12 +71,17 @@ const mainRoutes: Routes = [
     MessagesComponent,
     NavigationComponent,
     DocumentsComponent,
-    SettingsComponent
+    SettingsComponent,
+    DirectionsMapDirective
   ],
   imports: [
     RouterModule.forChild(mainRoutes),
     CommonModule,
-    SharedModule
+    SharedModule,
+    AgmCoreModule.forRoot({
+      apiKey: environment.googleMapsKey
+
+    })
   ],
   exports: [
     RouterModule

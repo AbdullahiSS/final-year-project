@@ -132,6 +132,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "final-year-project"
+    }
+  },
+  "defaultProject": "final-year-project",
+  "cli": {
+    "analytics": false
+  }
 }

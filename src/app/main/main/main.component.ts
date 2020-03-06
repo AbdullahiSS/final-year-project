@@ -9,6 +9,9 @@ export class MainComponent implements OnInit {
 
   sideNavState = "expanded";
 
+  // currentComponent = "document";
+  // components: Array<string> = ["document", "reporting", "settings"];
+
   constructor() { }
 
   ngOnInit() {
@@ -17,5 +20,11 @@ export class MainComponent implements OnInit {
   toggleSideNAvState() {
     
   }
+
+  // changeComponent(component: string) {
+  //   if(this.components.includes(component)){
+  //     this.currentComponent = component;
+  //   }
+  // }
 
 }

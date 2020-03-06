@@ -1,4 +1,6 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, Directive, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { GoogleMapsAPIWrapper } from '@agm/core';
+import { ILatLng } from '../directions-map.directive';
 
 @Component({
   selector: 'main-navigation',
@@ -6,43 +8,28 @@ import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angula
   styleUrls: ['./navigation.component.sass']
 })
 
+export class NavigationComponent implements OnInit, AfterViewInit {
 
-
-export class NavigationComponent implements AfterViewInit {
-
-  @ViewChild('mapContainer', { static: false }) gmap: ElementRef;
-  map: google.maps.Map;
-  lat = 40.730610;
-  lng = -73.935242;
-
-  coordinates = new google.maps.LatLng(this.lat, this.lng);
-
-  mapOptions: google.maps.MapOptions = {
-    center: this.coordinates,
-    zoom: 8
+  // Washington, DC, USA
+  origin: ILatLng = {
+    latitude: 38.889931,
+    longitude: -77.009003
   };
-  //Marker
-  marker = new google.maps.Marker({
-    position: this.coordinates,
-    map: this.map,
-  });
+  // New York City, NY, USA
+  destination: ILatLng = {
+    latitude: 40.730610,
+    longitude: -73.935242
+  };
+  displayDirections = true;
+  zoom = 14;
+  constructor(private gmapsApi: GoogleMapsAPIWrapper) { }
 
-  ngAfterViewInit(): void {
-    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
-    //Add 'implements AfterViewInit' to the class.
-    this.mapInitializer();
-  }
-
-  mapInitializer() {
-    this.map = new google.maps.Map(this.gmap.nativeElement,
-      this.mapOptions);
-      this.marker.setMap(this.map);
-  }
-
-  constructor() { }
 
   ngOnInit() {
+
   }
 
+
+  ngAfterViewInit(): void { }
 
 }
