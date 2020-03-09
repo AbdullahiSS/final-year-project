@@ -49,14 +49,14 @@ const mainRoutes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/main',
+        redirectTo: '/driver',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/main',
+    redirectTo: '/driver',
     pathMatch: 'full'
   }
 ];

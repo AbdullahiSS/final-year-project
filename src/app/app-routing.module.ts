@@ -27,9 +27,9 @@ const routes: Routes = [
     loadChildren: () => import("./authentication/authentication.module").then(d => d.AuthenticationModule)
   },
   {
-    path: 'main',
+    path: 'driver',
     canActivate: [AuthGuard],
-    loadChildren: () => import("./main/main.module").then(d => d.MainModule)
+    loadChildren: () => import("./Driver/main.module").then(d => d.MainModule)
   }
 ];
 

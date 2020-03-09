@@ -36,7 +36,8 @@
             ],
             "scripts": [
               "src/assets/js/main.js",
-              "src/assets/js/functions.js"
+              "src/assets/js/functions.js",
+              "src/assets/js/doc.js"
             ]
           },
           "configurations": {

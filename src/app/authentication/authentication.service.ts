@@ -108,7 +108,7 @@ export class AuthenticationService {
   private authSuccessfully() {
     this.isAuthenticated = true;
     this.authChange.next(true);
-    this.router.navigate(['/main'])
+    this.router.navigate(['/driver/dashboard'])
   }
 
   // register(email: string, password: string) {
