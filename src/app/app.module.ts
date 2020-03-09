@@ -12,10 +12,10 @@ import { AgmCoreModule } from '@agm/core';
 import { GoogleMapsAPIWrapper } from '@agm/core';
 
 import { AuthenticationModule } from './authentication/authentication.module';
-import { HomeModule } from './home/home.module';
+import { HomeModule } from './public/home/home.module';
 import { SharedModule } from './shared/shared.module';
-import { ServicesModule } from './services/services.module';
-import { AboutUsModule } from './about-us/about-us.module';
+import { ServicesModule } from './public/services/services.module';
+import { AboutUsModule } from './public/about-us/about-us.module';
 
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';

@@ -6,19 +6,19 @@ import { AuthGuard } from './authentication/auth.guard';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import("./home/home.module").then(d => d.HomeModule)
+    loadChildren: () => import("./public/home/home.module").then(d => d.HomeModule)
   },
   {
     path: 'services',
-    loadChildren: () => import ("./services/services.module").then(d => d.ServicesModule)
+    loadChildren: () => import ("./public/services/services.module").then(d => d.ServicesModule)
   },
   {
     path: 'about-us',
-    loadChildren: () => import ("./about-us/about-us.module").then(d => d.AboutUsModule)  
+    loadChildren: () => import ("./public/about-us/about-us.module").then(d => d.AboutUsModule)  
   },
   {
     path: 'contact-us', 
-    loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
+    loadChildren: () => import('./Public/contact-us/contact-us.module').then(m => m.ContactUsModule)
   },
   {
     path: 'authentication',

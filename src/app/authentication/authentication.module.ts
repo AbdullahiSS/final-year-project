@@ -4,7 +4,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AuthGuard } from '../auth-guard.service';
+import { AuthGuard } from '../authentication/auth.guard';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
