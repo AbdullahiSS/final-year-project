@@ -35,7 +35,6 @@
               "src/assets/scss/core_kit7.scss"
             ],
             "scripts": [
-              "src/assets/js/auth.js",
               "src/assets/js/main.js",
               "src/assets/js/functions.js"
             ]

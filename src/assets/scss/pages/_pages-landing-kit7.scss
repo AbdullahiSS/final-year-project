@@ -1274,7 +1274,7 @@ TABLE OF CONTENTS
 
             &.is-active {
                 .register {
-                    transform: translateY(0);
+                    transform: translateY(-100%);
                 }
 
                 .login {
@@ -1282,10 +1282,10 @@ TABLE OF CONTENTS
                 }
             }
 
-            .register {
-                transform: translateY(-100%);
-                transition: all .5s ease-in-out;
-            }
+            // .register {
+            //     transform: translateY(-100%);
+            //     transition: all .5s ease-in-out;
+            // }
 
             .login {
                 transform: translateY(0);
@@ -1425,7 +1425,7 @@ TABLE OF CONTENTS
                 display: none;
             }
 
-            .action-btn {
+            .login-register {
                 height: 40px;
                 min-width: 160px;
                 color: $primary;

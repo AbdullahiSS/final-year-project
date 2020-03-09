@@ -5,35 +5,21 @@
 </div>
 
 <div class="auth-outer">
-
-  <div class="mobile-auth-toggle">
-    <h3 class="title">Have an account?</h3>
-    <button type="button" class="button action-btn is-rounded">Register</button>
-  </div>
-
   <div class="auth-box shadow">
     <div class="form-wrapper">
-      <div class="login">
+      <div class="register">
         <div class="header">
-          <h2 class="title is-4">Login</h2>
-        </div>
-        <div class="item-list">
-          <div class="item shadow">
-            <a><i class="fa fa-google"></i></a>
-            <a><i class="fa fa-facebook"></i></a>
-            <a><i class="fa fa-linkedin"></i></a>
-          </div>
+          <h2 class="title is-4">Register</h2>
         </div>
         <div class="body">
-          <form [formGroup]="loginForm">
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="field">
               <div class="level form-group">
                 <label class="label level-item has-level-item-centered title is-5">Account User</label>
               </div>
               <div class="control has-icons-left">
                 <div class="select">
-                  <select>
-                    <!-- <option class="selected"> Account User </option> -->
+                  <select name="type">
                     <option value="Driver">Driver</option>
                     <option value="Customer">Customer</option>
                   </select>
@@ -44,72 +30,39 @@
               </div>
             </div>
             <div class="field">
-              <div class="control">
-                <input type="text" class="input" placeholder="Email">
-                <div class="form-icon">
-                  <i class="sl sl-icon-envelope-open"></i>
-                </div>
-              </div>
-            </div>
-            <div class="field">
-              <div class="control">
-                <input type="password" class="input" placeholder="Password">
-                <div class="form-icon">
-                  <i class="sl sl-icon-lock"></i>
-                </div>
-              </div>
-            </div>
-            <button type="submit" class="button primary-btn raised is-rounded is-bold">Login</button>
-            <a href="#" class="forgot-password">
-              Forgot Password?
-            </a>
-          </form>
-        </div>
-      </div>
-      <div class="register">
-        <div class="header">
-          <h2 class="title is-4">Register</h2>
-        </div>
-        <div class="item-list">
-          <div class="item shadow">
-            <a><i class="fa fa-google"></i></a>
-            <a><i class="fa fa-facebook"></i></a>
-            <a><i class="fa fa-linkedin"></i></a>
-          </div>
-        </div>
-        <div class="body">
-          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-            <div class="field" formGroupName="userData">
               <div class="control is-grouped">
-                <input type="text" id="username" class="input" placeholder="Username">
+                <input class="input" type="text" id="username" placeholder="Username" formControlName="username">
+                <span *ngIf="!registerForm.get('username').valid && registerForm.get('username').touched"
+                  class="help">Valid username is required!</span>
                 <div class="form-icon">
                   <i class="sl sl-icon-user"></i>
                 </div>
               </div>
             </div>
-            <div class="field" formGroupName="userData">
+            <div class="field">
               <div class="control">
-                <input type="text" class="input" placeholder="Email" formControlName="email">
+                <input class="input" type="text" placeholder="Email" formControlName="email">
+                <span *ngIf="!registerForm.get('email').valid && registerForm.get('email').touched" class="help">
+                  Valid email is required!
+                </span>
                 <div class="form-icon">
                   <i class="sl sl-icon-envelope-open"></i>
                 </div>
-                <!-- <span *ngIf="!signupForm.get('userData.username').valid && signupForm.get('userData.username').touched"
-                  class="help-block"> -->
-                  <!-- <span *ngIf="signupForm.get('userData.username').errors['nameIsForbidden']">This name is
-                    invalid!</span> -->
-                  <!-- <span *ngIf="signupForm.get('userData.username').errors['required']">This field is required!</span> -->
-                <!-- </span> -->
               </div>
             </div>
-            <!-- </div> -->
             <div class="field">
               <div class="control">
-                <input type="password" class="input form-control" placeholder="Password" formControlName="password">
+                <input class="input" type="password" placeholder="Password" formControlName="password">
+                <span *ngIf="!registerForm.get('password').valid && registerForm.get('password').touched" class="help">
+                  Password should be at least 6 characters!
+                </span>
                 <div class="form-icon">
                   <i class="sl sl-icon-lock"></i>
                 </div>
               </div>
             </div>
+            <span *ngIf="!registerForm.valid && registerForm.touched" class="help">Please enter valid
+              data</span>
             <div class="d-flex flex-column">
               <button type="submit" class="button primary-btn raised is-rounded is-bold">Register</button>
             </div>
@@ -119,6 +72,6 @@
     </div>
     <div class="side-box">
       <h3 class="title is-light">Have an account?</h3>
-      <button type="button" class="button action-btn is-rounded">Register</button>
+      <button type="submit" routerLink="/login" class="button login-register is-rounded">Login</button>
     </div>
   </div>

@@ -52,16 +52,16 @@ export class AuthenticationComponent implements OnInit {
     // }
 
     this.authenticationService.login({
-      // type: this.loginForm.value.type,
+      type: this.loginForm.value.type,
       email: this.loginForm.value.email,
       password: this.loginForm.value.password
-    })
+    });
 
-    this.authenticationService.registerUser({
-      // type: this.registerForm.value.type,
-      email: this.registerForm.value.email,
-      password: this.registerForm.value.password
-    })
+    // this.authenticationService.registerUser({
+    //   type: this.registerForm.value.type,
+    //   email: this.registerForm.value.email,
+    //   password: this.registerForm.value.password
+    // })
 
     this.loginForm.reset();
     this.registerForm.reset();
