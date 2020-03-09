@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AuthGuard } from './auth-guard.service';
+import { AuthGuard } from './authentication/auth.guard';
 
 
 const routes: Routes = [
@@ -39,6 +39,7 @@ const routes: Routes = [
   ],
   exports: [
     RouterModule
-  ]
+  ],
+  providers: [AuthGuard]
 })
 export class AppRoutingModule { }

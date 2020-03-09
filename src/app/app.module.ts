@@ -19,8 +19,8 @@ import { AboutUsModule } from './about-us/about-us.module';
 
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
-import { AuthService } from './auth.service';
-import { AuthGuard } from './auth-guard.service';
+import { AuthenticationService } from './authentication/authentication.service'
+import { AuthGuard } from './authentication/auth.guard';
 
 @NgModule({
   declarations: [
@@ -45,7 +45,7 @@ import { AuthGuard } from './auth-guard.service';
 
     })
   ],
-  providers: [AuthService, AuthGuard, GoogleMapsAPIWrapper],
+  providers: [AuthenticationService, GoogleMapsAPIWrapper],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

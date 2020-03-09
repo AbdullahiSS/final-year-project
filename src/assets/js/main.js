@@ -3,7 +3,7 @@ Core functions execution (functions.js)
 ========================================================================== */
 "use strict";
 
-// initPageLoader();
+initPageLoader();
 $(document).ready(function ($) {
   disableSidebarLinks();
   initNavbar();
@@ -16,8 +16,8 @@ $(document).ready(function ($) {
   initBackToTop();
   initGitem();
   initScrollToHash();
-  // initCarousel();
-  // initFaq();
-  // initPricing();
-  // initPricingCarousel();
+  initCarousel();
+  initFaq();
+  initPricing();
+  initPricingCarousel();
 });
