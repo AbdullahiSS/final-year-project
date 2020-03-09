@@ -13,22 +13,22 @@
         </div>
         <div class="body">
           <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-            <div class="field">
+            <!-- <div class="field">
               <div class="level form-group">
                 <label class="label level-item has-level-item-centered title is-5">Account User</label>
               </div>
               <div class="control has-icons-left">
                 <div class="select">
                   <select name="type">
-                    <option value="Driver">Driver</option>
-                    <option value="Customer">Customer</option>
+                    <option value="driver">Driver</option>
+                    <option value="customer">Customer</option>
                   </select>
                 </div>
                 <div class="icon is-small is-left">
                   <i class="fas fa-user"></i>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="field">
               <div class="control is-grouped">
                 <input class="input" type="text" id="username" placeholder="Username" formControlName="username">
@@ -60,6 +60,16 @@
                   <i class="sl sl-icon-lock"></i>
                 </div>
               </div>
+            </div>
+            <div class="is-bold is-uppercase">
+              <label class="checkbox-wrap">
+                <input type="checkbox" name="isDriver" (change)="onDriverChange($event)"/>
+                Driver
+              </label>
+              <label class="checkbox-light">
+                <input type="checkbox" name="isCustomer" (change)="onCustomerChange($event)"/>
+                Customer
+              </label>
             </div>
             <span *ngIf="!registerForm.valid && registerForm.touched" class="help">Please enter valid
               data</span>

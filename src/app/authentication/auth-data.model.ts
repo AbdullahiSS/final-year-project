@@ -1,5 +1,8 @@
 export interface AuthData {
-    email: string,
-    password: string,
-    type: string
+    username?: string;
+    email: string;
+    password: string;
+    isDriver: boolean;
+    isCustomer: boolean;
+    isBoth?: boolean;
 }

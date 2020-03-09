@@ -4,6 +4,8 @@ import { Subject } from 'rxjs/Subject';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { User } from './user.model';
 import { AuthData } from './auth-data.model';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { auth } from 'firebase';
 
 export interface AuthenticationResponseData {
   kind: string;
@@ -22,19 +24,59 @@ export class AuthenticationService {
   authChange = new Subject<boolean>();
   user = new Subject<User>();
   private isAuthenticated = false;
+  
 
-  constructor(private router: Router, private afAuth: AngularFireAuth) { }
-
+  constructor(private router: Router, private afAuth: AngularFireAuth, private db: AngularFirestore) { }
+  
+ 
   registerUser(authData: AuthData) {
-    this.afAuth.auth
+
+    //console.log(this.db.collection("users", ref => ref.where('username', '==', authData.username) ))
+
+
+    if(authData.isDriver == false && authData.isCustomer == false ){
+      console.log('error: choose at least one account type')
+      this.isAuthenticated = false;
+    }else{
+      this.afAuth.auth
       .createUserWithEmailAndPassword(authData.email, authData.password)
       .then(result => {
-        console.log(result);
-        this.authSuccessfully();
+
+
+
+
+        // console.log(this.db.collection("users", ref => ref.where('username', '==', authData.username) ))
+      
+  
+        if(authData.isDriver == true && authData.isCustomer == true ){
+          authData.isBoth = true
+        }else{authData.isBoth = false}
+
+      this.db.collection('users').doc(authData.username).set({
+          username: authData.username,
+          email: authData.email,
+          isDriver: authData.isDriver,
+          isCustomer: authData.isCustomer,
+          isBoth: authData.isBoth
+      })
+      .then(function(d) {
+          console.log("Document successfully written!", d);
+          console.log()
+
+      })
+      .catch(function(error) {
+          console.error("Error writing document: ", error);
+      });
+          this.authSuccessfully();
+
       })
       .catch(error => {
         console.log(error);
       });
+      
+    }
+    
+    
   }
 
 
@@ -52,8 +94,9 @@ export class AuthenticationService {
 
   logout() {
     // this.afAuth.auth.signOut();
+    this.user = null; 
     this.authChange.next(false);
-    this.router.navigate(['/authentication']);
+    this.router.navigate(['/login']);
     this.isAuthenticated = false;
   }
 
