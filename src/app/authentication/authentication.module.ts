@@ -8,22 +8,21 @@ import { AuthGuard } from '../authentication/auth.guard';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
+import { LoginDecisionComponent } from './login-decision/login-decision.component';
 
 
 const authRoutes: Routes = [
-  // {
-  //   path: '',
-  //   component: AuthenticationComponent
-  // }
   {
     path: 'login',
-    // canActivate:[AuthGuard],
     component: LoginComponent
   },
   {
     path: 'register',
-    // canActivate:[AuthGuard],
     component: RegisterComponent
+  },
+  {
+    path: 'login-decision',
+    component: LoginDecisionComponent
   }
 ];
 
@@ -31,7 +30,8 @@ const authRoutes: Routes = [
   declarations: [
     LoginComponent,
     RegisterComponent, 
-    AuthenticationComponent
+    AuthenticationComponent, 
+    LoginDecisionComponent
   ],
   imports: [
     CommonModule,

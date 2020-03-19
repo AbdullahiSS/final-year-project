@@ -23,7 +23,7 @@
     "@angular/router": "~9.1.0-next.2",
     "@types/googlemaps": "^3.39.3",
     "bulma": "^0.8.0",
-    "firebase": "^7.9.3",
+    "firebase": "^7.11.0",
     "geofire": "^5.0.1",
     "googlemaps": "^1.12.0",
     "rxjs": "^6.5.4",

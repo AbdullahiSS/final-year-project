@@ -21,10 +21,12 @@ import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { AuthenticationService } from './authentication/authentication.service'
 import { AuthGuard } from './authentication/auth.guard';
+import { FireFormDirective } from './fire-form.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FireFormDirective
   ],
   imports: [
     AppRoutingModule,

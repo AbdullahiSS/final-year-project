@@ -4,7 +4,7 @@ import { Subject } from 'rxjs/Subject';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { User } from './user.model';
 import { AuthData } from './auth-data.model';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, validateEventsArray } from '@angular/fire/firestore';
 import { auth } from 'firebase';
 
 export interface AuthenticationResponseData {
@@ -24,33 +24,29 @@ export class AuthenticationService {
   authChange = new Subject<boolean>();
   user = new Subject<User>();
   private isAuthenticated = false;
-  
+  private _username = ""
 
   constructor(private router: Router, private afAuth: AngularFireAuth, private db: AngularFirestore) { }
-  
  
   registerUser(authData: AuthData) {
 
     //console.log(this.db.collection("users", ref => ref.where('username', '==', authData.username) ))
 
-
     if(authData.isDriver == false && authData.isCustomer == false ){
       console.log('error: choose at least one account type')
       this.isAuthenticated = false;
-    }else{
+    }else {
       this.afAuth.auth
       .createUserWithEmailAndPassword(authData.email, authData.password)
       .then(result => {
 
-
-
-
         // console.log(this.db.collection("users", ref => ref.where('username', '==', authData.username) ))
-      
   
-        if(authData.isDriver == true && authData.isCustomer == true ){
+        if(authData.isDriver == true && authData.isCustomer == true ) {
           authData.isBoth = true
-        }else{authData.isBoth = false}
+        }else {
+          authData.isBoth = false
+        }
 
       this.db.collection('users').doc(authData.username).set({
           username: authData.username,
@@ -62,13 +58,24 @@ export class AuthenticationService {
       .then(function(d) {
           console.log("Document successfully written!", d);
           console.log()
-
       })
       .catch(function(error) {
           console.error("Error writing document: ", error);
       });
-          this.authSuccessfully();
 
+
+        if (authData.isBoth === true) {
+          //ask user to where they want to login to 
+          //route to decision page
+        } else {
+          if (authData.isCustomer === true) {
+            //route to customer
+            this.authSuccessfully('/customer/dashboard')
+          } else {
+            //route to driver
+            this.authSuccessfully('/driver/dashboard')
+          }
+        }
       })
       .catch(error => {
         console.log(error);
@@ -79,13 +86,49 @@ export class AuthenticationService {
     
   }
 
+  setUsername(doc) {
+    this._username = doc.id
+    console.log('username', this._username)
+  }
+  
+  get username() {
+    return this._username
+  }
 
   login(authData: AuthData) {
     this.afAuth.auth
       .signInWithEmailAndPassword(authData.email, authData.password)
       .then(result => {
-        console.log(result);
-        this.authSuccessfully();
+        console.log('email', authData.email)
+        this.db.collection('users', ref=>ref.where('email', '==', authData.email))
+        .get().subscribe(snapshot=>{
+          console.log(snapshot.docs)
+          snapshot.forEach(doc=>{
+            this.setUsername(doc)
+          })
+          this.db.collection('users', ref=>ref.where('email', '==', authData.email))
+          .valueChanges()
+          .subscribe(
+            (val: any)=> {
+              console.log(val)
+              if(val[0].isBoth === true){
+                //ask user to where they want to login to 
+                //route to decision page
+                this.authSuccessfully('/login-decision')
+              }else{
+                if(val[0].isCustomer === true){
+                  //route to customer
+                  this.authSuccessfully('/customer/dashboard')
+                } else{
+                  //route to driver
+                  this.authSuccessfully('/driver/dashboard')
+                }
+                }
+              }
+              
+            );
+        })
+        
       })
       .catch(error => {
         console.log(error);
@@ -105,10 +148,11 @@ export class AuthenticationService {
     return this.isAuthenticated;
   }
 
-  private authSuccessfully() {
+  private authSuccessfully(url) {
     this.isAuthenticated = true;
     this.authChange.next(true);
-    this.router.navigate(['/driver/dashboard'])
+    //this.router.navigate(['/driver/dashboard']);
+    this.router.navigate([url]);
   }
 
   // register(email: string, password: string) {

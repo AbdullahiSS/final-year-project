@@ -1,0 +1,446 @@
+//section
+  //  min-width: 300px
+    //height: 100%
+   // background: blue
+    //color: white
+
+//section *
+  //  color: white
+
+//Bulkit general color variables 
+
+//TABLE OF CONTENTS
+//0. Bulkit colors
+//1. State colors
+//2. Social colors
+//3. Predefined gradients
+//4. Predefined box shadows
+
+//0. Bulkit colors
+$primary: #4A00E0
+$secondary: #23a6d5
+$accent: #8E2DE2
+
+$white: #fff
+$smoke-white: #fcfcfc
+$grey-white: #f2f2f2
+$grey-white-accent: #e2e2e2
+$light-white: #fafafa
+$command-grey: #fafbfc
+$light-grey: #EFF4F7
+$ultra-light-grey: #f7fcff
+$title-grey: #A9ABAC
+$input-grey: #dbdbdb
+$blue-grey: #444F60
+$light-blue-grey: #98a9c3
+$medium-grey: #66676b
+$basaltic-grey: #878787
+$muted-grey: #999
+$section-grey: #fbfbfb
+$section-grey-accent: #efefef
+$background-grey: #f3f5f7
+$header-grey: #F5F9FC
+$default-input: #ccc
+$placeholder: #cecece
+$fade-grey: #ededed
+$sidebar: #344258
+$coal: #444444
+$grey-6: #666
+$grey-5: #555
+$grey-3: #333
+$cream-grey: #f6f4ff
+$icon-grey: #818a97
+$border-grey: #d4dadf
+$dashboard-grey: #f4f6fb
+$link-grey: #f5f5f5
+
+//1. State colors
+
+$red: #FF7273
+$blue: #039BE5
+$green: #00b289
+$orange: #eda514
+
+//2. Social colors
+
+$facebook: #3B5998
+$twitter: #1dcaff
+$linkedin: #007bb6
+$tumblr: #35465c
+$github: #444
+$dribbble: #ea4c89
+$google-plus: #d34836
+$youtube: #cc181e
+$reddit: #ff4500
+
+//3. Predefined gradients
+
+// Modal gradient
+$modal-ga: #6a85b6
+$modal-gb: #bac8e0
+
+$webkit-modal-gradient: -webkit-linear-gradient(45deg, $modal-ga 0%, $modal-gb 100%)
+$modal-gradient: linear-gradient(45deg, $modal-ga 0%, $modal-gb 100%)
+
+// Coal
+$coal-a: $blue-grey
+$coal-b: #444
+
+/* Chrome 10-25, Safari 5.1-6 */
+$webkit-coal-gradient: -webkit-linear-gradient(45deg, $coal-a, $coal-b) 
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+$coal-gradient: linear-gradient(45deg, $coal-a, $coal-b) 
+
+//4. Predefined box shadows
+
+$base-shadow: rgba(0, 0, 0, 0.12)
+
+//Orange box shadow
+$orange-shadow-from: rgba(237, 165, 20, 0.42)
+$orange-shadow-to: rgba(237, 165, 20, 0.2)
+$orange-box-shadow: 0 14px 26px -12px $orange-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $orange-shadow-to !important
+
+//Green box shadow
+$green-shadow-from: rgba(0, 178, 137, 0.42)
+$green-shadow-to: rgba(0, 178, 137, 0.2)
+$green-box-shadow: 0 14px 26px -12px $green-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $green-shadow-to !important
+
+//Red box shadow
+$red-shadow-from: rgba(255, 114, 115, 0.42)
+$red-shadow-to: rgba(255, 114, 115, 0.2)
+$red-box-shadow: 0 14px 26px -12px $red-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $red-shadow-to !important
+
+//Blue box shadow
+$blue-shadow-from: rgba(3, 155, 229, 0.42)
+$blue-shadow-to: rgba(3, 155, 229, 0.2)
+$blue-box-shadow: 0 14px 26px -12px $blue-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $blue-shadow-to !important
+
+
+//.header
+//    height: 60px
+//    background: grey
+//    width: 100%
+//    position: sticky
+//    top: 0
+//    left: 0
+
+
+    //Active state
+    &.is-active 
+        transform: translateX(0)
+    
+
+    //Categories side menu
+    .category-menu-wrapper 
+        height: 100%
+        position: relative
+        width: 80px
+        background: $primary
+
+        ul.categories 
+            li 
+                height: 60px
+
+                &.square-logo 
+                    display: flex
+                    justify-content: center
+                    align-items: center
+
+                    img 
+                        max-height: 28px
+                    
+                
+
+                &.category-link 
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    cursor: pointer
+
+                    i 
+                        font-size: 20px
+                        color: $white
+                    
+
+                    &:hover 
+                        background: lighten($primary, 5%)
+                    
+                
+
+                &.is-active {
+                    background: lighten($primary, 10%)
+                
+            
+        
+
+        //Bottom avatar
+        .author 
+            position: absolute
+            left: 0
+            bottom: 0
+            width: 100%
+
+            li 
+                display: flex
+                align-items: center
+                justify-content: center
+                position: relative
+            
+
+            a 
+                position: relative
+                z-index: 4
+            
+
+            .main-menu-author 
+                width: 48px
+                height: 48px
+                border-radius: 100px
+                margin: 0 auto
+                margin-bottom: 10px
+                transform: scale(1)
+                transition: transform .4s
+
+                &:hover 
+                    transform: scale(1.1)
+
+        //Header
+        .navigation-menu-header 
+            height: 60px
+            color: $white
+            display: flex
+            align-items: center
+            padding-left: 25px
+            text-transform: uppercase
+            font-weight: 300
+            color: $smoke-white
+            letter-spacing: 3px
+            font-size: 92%
+
+            .menu-toggle .icon-box-toggle span i 
+                background: $white
+            
+            .navigation-close 
+                opacity: 0
+            
+        //Menu and menu items
+        .navigation-menu li a span 
+            margin-right: 20px
+            color: $white
+            font-size: 22px
+        
+        .navigation-menu li a 
+            padding: 18px 25px
+            display: block
+            text-decoration: none
+            color: $white
+            display: flex
+            align-items: center
+
+            &.is-submenu 
+                padding: 12px 25px
+            
+
+            &.parent-link 
+                height: 60px !important
+                position: relative
+
+                &.has-new 
+                    &:before 
+                        content: ''
+                        position: absolute
+                        top: 18px
+                        left: 22px
+                        width: 8px
+                        height: 8px
+                        border-radius: 50%
+                        background: $blue
+                        animation: pulsate 1s ease-out
+                        animation-iteration-count: infinite
+                        opacity: 0.0
+                    
+        .navigation-menu li a:hover 
+            background: lighten($sidebar, 5%)
+        
+        li.has-children.active-section a.parent-link 
+            color: lighten($secondary, 15%) !important
+
+            span, span:after 
+                color: lighten($secondary, 15%) !important
+
+        li.has-children ul 
+            padding: 0px
+        
+
+        li.has-children ul li a.is-submenu 
+            background-color: darken($sidebar, 5%)
+            padding-left: 62px !important
+            font-size: 95%
+
+            &:hover, &.is-active 
+                color: $secondary
+            
+
+            &.has-new-feature 
+                position: relative
+
+                &:after 
+                    content: '2.0'
+                    position: absolute
+                    color: $white
+                    background: $secondary
+                    padding: 0
+                    font-size: 10px
+                    font-weight: 700
+                    border-radius: 3px
+                    padding: 3px 6px
+                    right: 20px
+                
+
+                &.is-2_2 
+                    &:after 
+                        content: '2.2'
+                        background: $orange
+                    
+                
+
+                &.is-2_3 
+                    &:after 
+                        content: '2.3'
+                        background: $orange
+                    
+                
+
+                &.is-2_4 
+                    &:after 
+                        content: '2.4'
+                        background: $red
+                    
+                
+
+                &.is-2_5 
+                    &:after 
+                        content: '3.0'
+                        background: $primary
+                    
+                
+            
+
+            &.has-new-update 
+                position: relative
+
+                &:after 
+                    content: '2.1'
+                    position: absolute
+                    color: $white
+                    background: $primary
+                    padding: 0
+                    font-size: 10px
+                    font-weight: 700
+                    border-radius: 3px
+                    padding: 3px 6px
+                    right: 20px
+                
+
+                &.is-2_2 
+                    &:after 
+                        content: '2.2'
+                        background: $orange
+                    
+                
+
+                &.is-2_3 
+                    &:after 
+                        content: '2.3'
+                        background: $orange
+                    
+                
+
+                &.is-2_4 
+                    &:after 
+                        content: '2.4'
+                        background: $red
+                    
+                
+
+                &.is-2_5 
+                    &:after 
+                        content: '3.0'
+                        background: $primary
+                    
+                
+            
+        
+
+        li.has-children ul li a:hover 
+            color: $white
+            padding-left: 42px
+        
+
+        li.has-children, li 
+            position: relative
+        
+
+        .has-children span::after 
+            position: absolute
+            right: 30px
+            content: "\E315"
+            color: #fff
+            transition: all .5s
+            font-size: 90%
+            padding-top: 2px
+        
+
+        li.active.has-children span::after 
+            -moz-transform: rotate(90deg)
+            -o-transform: rotate(90deg)
+            -webkit-transform: rotate(90deg)
+            transform: rotate(90deg)
+        
+
+        li.active.has-children 
+            background: lighten($sidebar, 5%)
+        
+
+        .navigation-menu .has-children > ul 
+            display: none
+
+html, body
+    height: 100%
+    background-color: hsl(0%, 0%, 96%) 
+
+.box-shadow-y
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25)
+
+.icon
+    height: 30px
+    width: 30px
+    vertical-align: baseline
+    display: inline-flex
+    justify-content: center
+    align-items: center
+
+.px-1, .p-1 
+    padding-right: 0.75rem
+    padding-left: 0.75rem
+
+.py-1, .p-1
+    padding-top: 0.75rem
+    padding-bottom: 0.75rem
+
+.menu-container
+    position: fixed
+    bottom: 0
+    margin: auto
+    min-width: 300px
+    z-index: 10
+    background: transparent
+
+.expanded 
+    width: 300px
+
+.compact
+    width: 60px
+
+.collapsed
+    width: 0px

@@ -1,0 +1,100 @@
+<div class="is-0 is-variable ">
+    <div class="columm is-10-desktop is-offset-2-desktop is-9-tablet is-offset-3-tablet is-12-mobile padding-left">
+        <div>
+            <div class="p-1">
+                <div class="columns is-variable is-desktop">
+                    <div class="container column">
+                        <h1 class="title">Navigation</h1>
+                    </div>
+                </div>
+                <div class="container column">
+                    <agm-map appDirectionsMap [showDirection]="this.displayDirections" [origin]="origin"
+                        [destination]="destination" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false">
+                        <agm-marker [latitude]="origin.latitude" [longitude]="origin.longitude"></agm-marker>
+                    </agm-map>
+                </div>
+                <div class="columns pt-10 pr-10 is-variable is-desktop is-mobile">
+                    <div class="container column ">
+                        <div class="section">
+                            <div class="flex-card light-bordered hover-inset">
+                                <div class="card-body">
+                                    <div class="content">
+                                        <h2 class="no-margin title-bold">Pickup Location</h2>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <p class="header pl-10"> Street Address</p>
+                                            <input class="input is-rounded" type="text"
+                                                placeholder="Mississippi Street">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <p class="header pl-10">State</p>
+                                            <input class="input is-rounded" type="text" placeholder="Abuja">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <p class="header pl-10">Email</p>
+                                            <input class="input is-rounded" type="email" placeholder="John Doe">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <p class="header pl-10">Contact</p>
+                                            <input class="input is-rounded" type="tel" placeholder="+234....">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <p class="header pl-10">Zip Code</p>
+                                            <input class="input is-rounded" type="text" placeholder="Postal/ Zip Code">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <p class="header pl-10">Pickup Date</p>
+                                            <input class="input is-rounded" type="date" placeholder="Pickup Date">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container column">
+                        <div class="section">
+                            <div class="flex-card light-bordered hover-inset">
+                                <div class="card-body">
+                                    <div class="content">
+                                        <h2 class="no-margin title-bold">Drop-off location</h2>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input is-rounded" type="text" placeholder="Street Address">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input is-rounded" type="text" placeholder="State">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input is-rounded" type="text" placeholder="Postal/ Zip Code">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input is-rounded" type="date" placeholder="Drop-off Date">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

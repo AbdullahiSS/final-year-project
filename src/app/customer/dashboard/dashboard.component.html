@@ -1,0 +1,64 @@
+<div class="is-0 is-variable ">
+    <div class="columm is-10-desktop is-offset-2-desktop is-9-tablet is-offset-3-tablet is-12-mobile padding-left">
+        <div>
+            <div class="p-1">
+                <div class="columns is-variable is-desktop">
+                    <div class="column">
+                        <h1 class="title">Dashboard/ Current Trips</h1>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-header-title">
+                                    <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+                                        <ul>
+                                            <li><a [routerLink]="['/home']">Home</a></li>
+                                            <li><a [routerLink]="['/contact-us']">Contact</a></li>
+                                            <li><a [routerLink]="['/about-us']">About</a></li>
+                                            <li><a [routerLink]="['/services']">Services</a></li>
+                                            <li><a [routerLink]="['/main/dashboard']"
+                                                    routerLinkActive="router-link-active router-link-active">Dashboard</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <nav class="level">
+                                    <div class="level-item has-text-centered">
+                                        <div class="flex-card light-bordered">
+                                            <div class="card-body">
+                                                <div class="content">
+                                                    <h2 class="no-margin title-bold">Trips</h2>
+                                                    <p class="title">{{ trip_number }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-card light-bordered">
+                                            <div class="card-body">
+                                                <div class="content">
+                                                    <h2 class="no-margin title-bold">Completed Orders</h2>
+                                                    <p class="title">{{ order_number }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-card light-bordered">
+                                            <div class="card-body">
+                                                <div class="content">
+                                                    <h2 class="no-margin title-bold">Followers</h2>
+                                                    <p class="title">3,456</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
