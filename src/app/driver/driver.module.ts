@@ -12,13 +12,14 @@ import { MessagesComponent } from './messages/messages.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DocumentsComponent } from './documents/documents.component';
-import { SettingsComponent } from './settings/settings.component'
+import { SettingsComponent } from './settings/settings.component';
+import { ReactiveFormsModule } from '@angular/forms'
 
 import { SharedModule } from '../shared/shared.module';
 import { DirectionsMapDirective } from './directions-map.directive';
 
 
-const mainRoutes: Routes = [
+const driverRoutes: Routes = [
   {
     path: '',
     component: MainComponent,
@@ -75,16 +76,16 @@ const mainRoutes: Routes = [
     DirectionsMapDirective
   ],
   imports: [
-    RouterModule.forChild(mainRoutes),
+    RouterModule.forChild(driverRoutes),
     CommonModule,
     SharedModule,
     AgmCoreModule.forRoot({
       apiKey: environment.googleMapsKey
-
-    })
+    }),
+    ReactiveFormsModule
   ],
   exports: [
     RouterModule
   ]
 })
-export class MainModule { }
+export class DriverModule { }

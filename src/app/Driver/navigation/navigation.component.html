@@ -14,9 +14,10 @@
                     </agm-map>
                 </div>
                 <div class="columns pt-10 pr-10 is-variable is-desktop is-mobile">
-                    <div class="container column ">
-                        <div class="section">
-                            <div class="flex-card light-bordered hover-inset">
+                    <div class="column">
+                        <!-- <div class="section"> -->
+                        <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+                            <div class="flex-card light-bordered">
                                 <div class="card-body">
                                     <div class="content">
                                         <h2 class="no-margin title-bold">Pickup Location</h2>
@@ -24,74 +25,90 @@
                                     <div class="field">
                                         <div class="control">
                                             <p class="header pl-10"> Street Address</p>
-                                            <input class="input is-rounded" type="text"
+                                            <input class="input is-rounded" type="text" formControlName="p_street"
                                                 placeholder="Mississippi Street">
                                         </div>
                                     </div>
                                     <div class="field">
                                         <div class="control">
                                             <p class="header pl-10">State</p>
-                                            <input class="input is-rounded" type="text" placeholder="Abuja">
+                                            <input class="input is-rounded" type="text" formControlName="p_state"
+                                                placeholder="Abuja">
                                         </div>
                                     </div>
-                                    <div class="field">
+                                    <!-- <div class="field">
                                         <div class="control">
                                             <p class="header pl-10">Email</p>
-                                            <input class="input is-rounded" type="email" placeholder="John Doe">
+                                            <input class="input is-rounded" type="email" formControlName="p_email"
+                                                placeholder="John Doe">
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="field">
                                         <div class="control">
                                             <p class="header pl-10">Contact</p>
-                                            <input class="input is-rounded" type="tel" placeholder="+234....">
+                                            <input class="input is-rounded" type="tel" formControlName="p_tel"
+                                                placeholder="+234....">
                                         </div>
                                     </div>
                                     <div class="field">
                                         <div class="control">
                                             <p class="header pl-10">Zip Code</p>
-                                            <input class="input is-rounded" type="text" placeholder="Postal/ Zip Code">
+                                            <input class="input is-rounded" type="text" formControlName="p_zip_code"
+                                                placeholder="Postal/ Zip Code">
                                         </div>
                                     </div>
                                     <div class="field">
                                         <div class="control">
                                             <p class="header pl-10">Pickup Date</p>
-                                            <input class="input is-rounded" type="date" placeholder="Pickup Date">
+                                            <input class="input is-rounded" type="date" formControlName="p_date"
+                                                placeholder="Pickup Date">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="container column">
-                        <div class="section">
-                            <div class="flex-card light-bordered hover-inset">
+                            <!-- </div> -->
+                            <!-- </form> -->
+                            <!-- </div> -->
+                            <!-- <div class="container column"> -->
+                            <!-- <div class="section"> -->
+                            <!-- <form [formGroup]="dropoffForm" (ngSubmit)="onSubmit()"> -->
+                            <div class="flex-card light-bordered">
                                 <div class="card-body">
                                     <div class="content">
                                         <h2 class="no-margin title-bold">Drop-off location</h2>
                                     </div>
                                     <div class="field">
                                         <div class="control">
-                                            <input class="input is-rounded" type="text" placeholder="Street Address">
+                                            <input class="input is-rounded" type="text" formControlName="d_street"
+                                                placeholder="Street Address">
                                         </div>
                                     </div>
                                     <div class="field">
                                         <div class="control">
-                                            <input class="input is-rounded" type="text" placeholder="State">
+                                            <input class="input is-rounded" type="text" formControlName="d_state"
+                                                placeholder="State">
                                         </div>
                                     </div>
                                     <div class="field">
                                         <div class="control">
-                                            <input class="input is-rounded" type="text" placeholder="Postal/ Zip Code">
+                                            <input class="input is-rounded" type="text" formControlName="d_zip_code"
+                                                placeholder="Postal/ Zip Code">
                                         </div>
                                     </div>
                                     <div class="field">
                                         <div class="control">
-                                            <input class="input is-rounded" type="date" placeholder="Drop-off Date">
+                                            <input class="input is-rounded" type="date" formControlName="d_date"
+                                                placeholder="Drop-off Date">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="d-flex flex-column">
+                                <button type="submit" class="button primary-btn raised is-rounded is-bold">Place
+                                    order</button>
+                            </div>
+                        </form>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>

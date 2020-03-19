@@ -1,8 +1,5 @@
 import { Directive, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-// import { MainModule } from './main.module'
-// import { AgmCoreModule } from '@agm/core';
 import { GoogleMapsAPIWrapper } from '@agm/core';
-import { from } from 'rxjs';
 
 // You can use any other interface for origin and destination, but it must contain latlng data
 export interface ILatLng {
@@ -76,7 +73,7 @@ export class DirectionsMapDirective implements OnInit, OnChanges {
           },
           unitSystem: google.maps.UnitSystem.IMPERIAL
         },
-        
+
           (response, status) => {
             if (status === 'OK') {
               directionsRenderer.setDirections(response);
