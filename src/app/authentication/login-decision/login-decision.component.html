@@ -1,0 +1,25 @@
+<div class="columns is-mobile is-centered">
+    <div class="column is-half">
+        <div class="flex-card simple-shadow">
+            <div class="card-body">
+                <div class="content">
+                    <h2 class="no-margin has-text-centered">Routing</h2>
+                    <p class="pt-10">Kindly select which account you'll like to access.</p>
+                </div>
+            </div>
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <button type="submit" [routerLink]="['/customer/dashboard']"
+                        class="button primary-btn raised is-rounded is-bold">Customer Dashboard</button>
+                </div>
+            </div>
+            <div class="columns is-centered">
+                <div class="column is-half ml-30">
+                    <button type="submit" [routerLink]="['/driver/dashboard']"
+                        class="button primary-btn raised is-rounded is-bold">Driver Dashboard</button>
+                </div>
+            </div>
+            <div></div>
+        </div>
+    </div>
+</div>

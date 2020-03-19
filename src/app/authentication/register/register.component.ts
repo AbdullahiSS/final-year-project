@@ -14,7 +14,8 @@ export class RegisterComponent implements OnInit {
   loginForm: FormGroup;
   registerForm: FormGroup;
 
-  isDriver = false; isCustomer = false;
+  isDriver = false; 
+  isCustomer = false;
 
   isLoginMode = true;
   isLoading = false;
