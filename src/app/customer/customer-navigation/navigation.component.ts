@@ -8,7 +8,7 @@ import { ILatLng } from '../directions-map.directive';
   styleUrls: ['./navigation.component.sass']
 })
 
-export class NavigationComponent implements OnInit, AfterViewInit {
+export class CustomerNavigationComponent implements OnInit, AfterViewInit {
 
   // public lat = 24.799448;
   // public lng = 120.979021;

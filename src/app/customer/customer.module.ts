@@ -9,7 +9,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { ReportingComponent } from './reporting/reporting.component';
 import { HeaderComponent } from './header/header.component';
 import { MessagesComponent } from './messages/messages.component';
-import { NavigationComponent } from './navigation/navigation.component';
+import { CustomerNavigationComponent } from './customer-navigation/navigation.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { SettingsComponent } from './settings/settings.component'
@@ -37,7 +37,7 @@ const mainRoutes: Routes = [
       },
       {
         path: "navigation",
-        component: NavigationComponent
+        component: CustomerNavigationComponent
       },
       {
         path: "reporting",
@@ -69,7 +69,7 @@ const mainRoutes: Routes = [
     ReportingComponent,
     HeaderComponent,
     MessagesComponent,
-    NavigationComponent,
+    CustomerNavigationComponent,
     DocumentsComponent,
     SettingsComponent,
     DirectionsMapDirective

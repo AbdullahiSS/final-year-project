@@ -10,7 +10,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./navigation.component.sass']
 })
 
-export class NavigationComponent implements OnInit, AfterViewInit {
+export class DriverNavigationComponent implements OnInit, AfterViewInit {
 
   // pickupForm: FormGroup;
   // dropoffForm: FormGroup;

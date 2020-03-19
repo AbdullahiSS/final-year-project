@@ -9,7 +9,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { ReportingComponent } from './reporting/reporting.component';
 import { HeaderComponent } from './header/header.component';
 import { MessagesComponent } from './messages/messages.component';
-import { NavigationComponent } from './navigation/navigation.component';
+import { DriverNavigationComponent } from './driver-navigation/navigation.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { SettingsComponent } from './settings/settings.component';
@@ -38,7 +38,7 @@ const driverRoutes: Routes = [
       },
       {
         path: "navigation",
-        component: NavigationComponent
+        component: DriverNavigationComponent
       },
       {
         path: "reporting",
@@ -70,7 +70,7 @@ const driverRoutes: Routes = [
     ReportingComponent,
     HeaderComponent,
     MessagesComponent,
-    NavigationComponent,
+    DriverNavigationComponent,
     DocumentsComponent,
     SettingsComponent,
     DirectionsMapDirective
