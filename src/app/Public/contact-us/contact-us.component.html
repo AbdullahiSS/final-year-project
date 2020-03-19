@@ -4,9 +4,161 @@
     <div class="tile is-vertical is-12">
         <div class="tile is-parent">
             <article class="tile is-child box">
-                <p class="title">Contact Us</p>
+                <p class="title">Get in touch with us</p>
             </article>
         </div>
+
+        <div class="column">
+            <div class="columns">
+                <div class="tile is-ancestor">
+                    <div class="tile is-parent is-4">
+                        <div class="tile is-child"></div>
+                    </div>
+                    <!-- <div *ngIf="state === 'synced'" class="notification is-success">
+                        Form is synced with Firestore
+                    </div>
+
+                    <div *ngIf="state === 'modified'" class="notification is-warning">
+                        Form has unsaved changes
+                    </div>
+
+                    <div *ngIf="state === 'loading'" class="notification is-info">
+                        Form data is loading
+                    </div>
+
+                    <div *ngIf="state === 'synced'" class="notification is-danger">
+                        Form tried and failed to save to Firestore
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" fireform path="contacts">
+            <div class="container">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">From</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <p class="control is-expanded has-icons-left">
+                                            <input class="input" type="text" placeholder="Name" formControlName="name"
+                                                name="name">
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-user"></i>
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="field">
+                                        <p class="control is-expanded has-icons-left has-icons-right">
+                                            <input class="input" type="email" placeholder="Email"
+                                                formControlName="email" name="email">
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-envelope"></i>
+                                            </span>
+                                            <span class="icon is-small is-right">
+                                                <i class="fas fa-check"></i>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label"></div>
+                                <div class="field-body">
+                                    <div class="field is-expanded">
+                                        <div class="field has-addons">
+                                            <p class="control">
+                                                <a class="button is-static">
+                                                    +44
+                                                </a>
+                                            </p>
+                                            <p class="control is-expanded">
+                                                <input class="input" type="tel" placeholder="Your phone number"
+                                                    formControlName="tel" name="tel">
+                                            </p>
+                                        </div>
+                                        <p class="help">Do not enter the first zero</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Department</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field is-narrow">
+                                        <div class="control">
+                                            <div class="select is-fullwidth">
+                                                <select formControlName="department" required>
+                                                    <option value="">-</option>
+                                                    <option value="Computer Science">Computer Science</option>
+                                                    <option value="Design">Design</option>
+                                                    <option value="Electronic and Computer Engineering">Electronic and
+                                                        Computer Engineering</option>
+                                                    <option value="Flood and Coastal Engineering">Flood and Coastal
+                                                        Engineering</option>
+                                                    <option value="Life Sciences">Life Sciences</option>
+                                                    <option value="Mathematics">Mathematics</option>
+                                                    <option value="Mechanical, Aerospace and Civil Engineering">
+                                                        Mechanical, Aerospace and Civil Engineering</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Subject</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input" type="text" placeholder="e.g. Partnership opportunity"
+                                                formControlName="subject" name="subject">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Your Message</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <textarea class="textarea" placeholder="Explain how we can help you"
+                                                formControlName="message" name="message"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label">
+                                    <!-- Left empty for spacing -->
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <button type="submit" class="button is-raised primary-btn">
+                                                Send message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 
